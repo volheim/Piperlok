@@ -9,7 +9,7 @@ namespace Piperlok
 {
     abstract class Actors
     {
-
+        //bruges til at indikere om en actor er aktiv. kameraer som ikke er alive stopper, zombier er ikke længere farlige, piperlok og Milo MacDonald dør
         public bool alive;
 
         public float speed;
@@ -20,7 +20,9 @@ namespace Piperlok
         public PointF position;
         public Graphics sprite;
 
-        public abstract void Update();
+        public float gravityPull;
+
+        public abstract void Update(float fps);
 
         public abstract void Movement();
 
@@ -31,8 +33,18 @@ namespace Piperlok
 
         public virtual void Gravity()
         {
+            
+            
+        }
+
+        public void Draw(Graphics dc)
+        {
 
         }
 
+        public void UpdateAnimations(float fps)
+        {
+
+        }
     }
 }

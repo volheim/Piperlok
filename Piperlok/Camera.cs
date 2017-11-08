@@ -7,15 +7,15 @@ using System.Drawing;
 
 namespace Piperlok
 {
-    class Milo_MacDonald : Actors
+    class Camera : Actors
     {
-
         int damage;
 
-        public Milo_MacDonald(float speed, int health, PointF startPosition, Graphics sprite, int damage)
-        {
+        //et skud fra kameraet
+        Object bullet;
 
-            name = "Milo MacDonald";
+        public Camera(float speed, PointF startPosition, Graphics sprite, int damage)
+        {
 
         }
 
@@ -29,14 +29,15 @@ namespace Piperlok
 
         }
 
+        //kører hvis kameraet ser piperlok, laver et angreb
+        void SpotPiperlok()
+        {
+
+        }
+
         public override void Collide()
         {
             base.Collide();
-        }
-
-        public override void Gravity()
-        {
-            base.Gravity();
         }
     }
 }

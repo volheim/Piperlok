@@ -1,0 +1,11 @@
+C:\Users\Allan\source\repos\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok.png
+C:\Users\Allan\source\repos\Piperlok\Piperlok\bin\Debug\Piperlok.exe.config
+C:\Users\Allan\source\repos\Piperlok\Piperlok\bin\Debug\Piperlok.exe
+C:\Users\Allan\source\repos\Piperlok\Piperlok\bin\Debug\Piperlok.pdb
+C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csprojResolveAssemblyReference.cache
+C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.Form1.resources
+C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.Properties.Resources.resources
+C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.GenerateResource.Cache
+C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
+C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.exe
+C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
