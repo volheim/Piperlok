@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+// tillader brug af klasser som ikke ligger  i rodmappen.
+using Piperlok.GameObejcts;
+using Piperlok.Interfaces;
 
 
 namespace Piperlok
@@ -46,15 +49,16 @@ namespace Piperlok
 #if DEBUG
             Font f = new Font("Arial", 16);
             dc.DrawString(string.Format("FPS : {0}", currentFps), f, Brushes.Red, 2,2);
-#endif 
-            foreach (Actors act in actorList)
-            {
-                act.Draw(dc);
-            }
+#endif
             foreach (Objects obj in objList)
             {
                 obj.Draw(dc);
             }
+            foreach (Actors act in actorList)
+            {
+                act.Draw(dc);
+            }
+
 
             backBuffer.Render();
         }

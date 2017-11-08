@@ -9,3 +9,14 @@ C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.Generate
 C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
 C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.exe
 C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
+C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok.png
+C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\bin\Debug\Piperlok.exe.config
+C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\bin\Debug\Piperlok.exe
+C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\bin\Debug\Piperlok.pdb
+C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.csprojResolveAssemblyReference.cache
+C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.Form1.resources
+C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.Properties.Resources.resources
+C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.GenerateResource.Cache
+C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
+C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.exe
+C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.pdb

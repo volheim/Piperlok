@@ -24,7 +24,7 @@ namespace Piperlok
         {
             name = "Piperlok";
             //skab en sprite og collision box til piperlok
-            Graphics sprite = Graphics.FromImage(piperlokSprite);
+           // Graphics sprite = Graphics.FromImage(piperlokSprite);
             collisionBox.Height = piperlokSprite.Height;
             collisionBox.Width = piperlokSprite.Width;
 
@@ -35,10 +35,13 @@ namespace Piperlok
 
         public override void Update(float fps)
         {
+            //Checks if the spacebar is down and if Piperlok is on the ground then Piperlok will jump
             if (Keyboard.IsKeyDown(System.Windows.Forms.Keys.Space) && grounded)
             {
                 Jump();
             }
+            //
+            if (Keyboard.IsKeyDown(Keys.E)) { }
         }
 
         public override void Movement()
@@ -56,12 +59,16 @@ namespace Piperlok
             {
                 Jump();
             }
+            //Duck
             /*if (Keyboard.IsKeyDown(Keys.S))
             {
 
             }*/
         }
+        public void Interact()
+        {
 
+        }
         public void Jump()
         {
             grounded = false;

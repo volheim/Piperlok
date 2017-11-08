@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using Piperlok.Interfaces;
 
 namespace Piperlok
 {
-    class TechZombie : Actors
+    class TechZombie : Actors, IEnemy
     {
 
         int damage;
+        bool Direction = false;
 
         public TechZombie(float speed, int health, PointF startPosition, Graphics sprite, int damage)
         {
@@ -24,7 +26,14 @@ namespace Piperlok
 
         public override void Movement()
         {
-            
+            if (Direction == false)
+            {
+                position.X -= speed / Form1.currentFps;
+            }
+            else
+            {
+                position.X += speed / Form1.currentFps;
+            }
         }
 
         public override void Collide()

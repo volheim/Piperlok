@@ -15,7 +15,8 @@ namespace Piperlok
         public DateTime endTime;
         DateTime updateStart;
         DateTime updateEnd;
-
+        GameWorld gW;
+        Rectangle DisplayRectangle;
         public static float currentFps;
 
         public Form1()
@@ -37,7 +38,7 @@ namespace Piperlok
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            gW = new GameWorld(CreateGraphics(), this.DisplayRectangle);
         }
     }
 }
