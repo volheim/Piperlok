@@ -11,20 +11,39 @@ namespace Piperlok
     {
         //bruges til at indikere om en actor er aktiv. kameraer som ikke er alive stopper, zombier er ikke længere farlige, piperlok og Milo MacDonald dør
         public bool alive;
-
         public float speed;
         public int health;
-
         public string name;
+        
 
         public PointF position;
-        public Graphics sprite;
+        public Image sprite;
 
         public float gravityPull;
 
-        public abstract void Update(float fps);
+        float animationSpeed;
+        protected List<Image> animationFrames;
+        protected float currentFrameIndex = 5;
 
-        public abstract void Movement();
+
+        public virtual void Update(float fps)
+        {
+
+        }
+        
+        public Actors(float speed, string imagePath, PointF startposition)
+        {
+            animationSpeed = 5;
+            string[] imagePaths = imagePath.Split(';');
+            this.position = startposition;
+            this.animationFrames = new List<Image>();
+
+            foreach (string path in imagePaths)
+            {
+                animationFrames.Add(Image.FromFile(path));
+            }
+            this.sprite = this.animationFrames[0];
+        }
 
         public virtual void Collide()
         {
@@ -39,11 +58,18 @@ namespace Piperlok
 
         public void Draw(Graphics dc)
         {
-
+            dc.DrawImage(sprite, position.X, position.Y, sprite.Width, sprite.Height);
         }
 
         public void UpdateAnimations(float fps)
         {
+            float factor = 1 / fps;
+            currentFrameIndex += factor * animationSpeed;
+            if (currentFrameIndex >= animationFrames.Count)
+            {
+                currentFrameIndex = 0;
+            }
+            sprite = animationFrames[(int)currentFrameIndex];
 
         }
     }

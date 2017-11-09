@@ -14,7 +14,7 @@ namespace Piperlok
         //et skud fra kameraet
         Object bullet;
 
-        public Camera(float speed, PointF startPosition, Graphics sprite, int damage)
+        public Camera(string imagePaths, float speed, int health, PointF startPosition) : base(speed, imagePaths, startPosition)
         {
 
         }
@@ -23,11 +23,7 @@ namespace Piperlok
         {
 
         }
-
-        public override void Movement()
-        {
-
-        }
+        
 
         //kører hvis kameraet ser piperlok, laver et angreb
         void SpotPiperlok()
