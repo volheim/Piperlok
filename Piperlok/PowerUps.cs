@@ -14,6 +14,6 @@ namespace Piperlok
         //tid i sekunder powerupen er aktiv
         public float duration;
 
-        public PointF position;
+        public Vector2D position;
     }
 }
