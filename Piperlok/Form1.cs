@@ -15,13 +15,17 @@ namespace Piperlok
         public DateTime endTime;
         DateTime updateStart;
         DateTime updateEnd;
-        GameWorld gW;
-        Rectangle DisplayRectangle;
+        Graphics dc;
+        GameWorld gw;
+
         public static float currentFps;
 
         public Form1()
         {
             InitializeComponent();
+            timer1.Start();
+            
+
         }
 
         private void Tick1(object sender, EventArgs e)
@@ -34,11 +38,18 @@ namespace Piperlok
             currentFps = 1000 / milliseconds;
 
             endTime = DateTime.Now;
+            gw.GameLoop();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            gW = new GameWorld(CreateGraphics(), this.DisplayRectangle);
+            if(dc == null)
+            {
+                dc = CreateGraphics();
+            }
+
+            Rectangle s = this.DisplayRectangle;
+            gw = new GameWorld(CreateGraphics(), this.DisplayRectangle);
         }
     }
 }

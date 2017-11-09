@@ -16,63 +16,45 @@ namespace Piperlok
 
         public RectangleF collisionBox;
 
-        Image piperlokSprite = Image.FromFile(@"C: \Users\Allan\source\repos\Piperlok\Piperlok\Sprites\Piperlok.png");
+        
 
         bool grounded;
 
-        public Piperlok(float speed, int health, PointF startPosition)
+        public Piperlok(string imagePaths, float speed, int health, PointF startPosition) : base(speed, imagePaths, startPosition)
         {
             name = "Piperlok";
             //skab en sprite og collision box til piperlok
-           // Graphics sprite = Graphics.FromImage(piperlokSprite);
+
+
+            /*Graphics sprite = Graphics.FromImage(@"imagePaths");
             collisionBox.Height = piperlokSprite.Height;
-            collisionBox.Width = piperlokSprite.Width;
+            collisionBox.Width = piperlokSprite.Width;*/
 
             //sætter piperlok i midten af skærmen
-            position.X = 1200 / 2;
-            position.Y = 900 / 2;
         }
 
         public override void Update(float fps)
         {
-            //Checks if the spacebar is down and if Piperlok is on the ground then Piperlok will jump
-            if (Keyboard.IsKeyDown(System.Windows.Forms.Keys.Space) && grounded)
-            {
-                Jump();
-            }
-            //
-            if (Keyboard.IsKeyDown(Keys.E)) { }
-        }
-
-        public override void Movement()
-        {
+            Gravity();
             if (Keyboard.IsKeyDown(Keys.A))
             {
-                position.X -= speed / Form1.currentFps;
+                position.X -= ((1 / fps) * 150);
             }
             if (Keyboard.IsKeyDown(Keys.D))
             {
-                position.X += speed / Form1.currentFps;
+                position.X += ((1 / fps) * 150);
             }
-            
-            if (Keyboard.IsKeyDown(Keys.W))
+            if (Keyboard.IsKeyDown(System.Windows.Forms.Keys.Space) && grounded || Keyboard.IsKeyDown(Keys.W) && grounded)
             {
                 Jump();
             }
-            //Duck
-            /*if (Keyboard.IsKeyDown(Keys.S))
-            {
-
-            }*/
         }
-        public void Interact()
-        {
 
-        }
         public void Jump()
         {
             grounded = false;
             jumpHeightLeft = jumpHeight;
+            Gravity();
         }
 
         public override void Collide()

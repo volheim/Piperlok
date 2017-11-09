@@ -4,9 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
-// tillader brug af klasser som ikke ligger  i rodmappen.
-using Piperlok.GameObejcts;
-using Piperlok.Interfaces;
 
 
 namespace Piperlok
@@ -25,8 +22,10 @@ namespace Piperlok
 
         void SetupWorld()
         {
+            endTime = DateTime.Now;
             actorList = new List<Actors>();
-            actorList.Add(new Piperlok(15, 3, new PointF(10, 850)));
+            objList = new List<Objects>();
+            actorList.Add(new Piperlok(@"Sprites\Piperlok.png", 15, 3, new PointF(0, 0)));
         }
 
         public void Update(float fps)
@@ -35,11 +34,12 @@ namespace Piperlok
             {
                 act.Update(Form1.currentFps);
             }
-            foreach(Objects obj in objList)
+            UpdateAnimation(fps);
+            foreach (Objects obj in objList)
             {
                 obj.Update(Form1.currentFps);
             }
-            UpdateAnimation(fps);
+            
         }
 
         public void Draw()
@@ -49,17 +49,15 @@ namespace Piperlok
 #if DEBUG
             Font f = new Font("Arial", 16);
             dc.DrawString(string.Format("FPS : {0}", currentFps), f, Brushes.Red, 2,2);
-#endif
-            foreach (Objects obj in objList)
-            {
-                obj.Draw(dc);
-            }
+#endif 
             foreach (Actors act in actorList)
             {
                 act.Draw(dc);
             }
-
-
+            foreach (Objects obj in objList)
+            {
+                obj.Draw(dc);
+            }
             backBuffer.Render();
         }
 
@@ -73,13 +71,13 @@ namespace Piperlok
 
         public void GameLoop()
         {
-            DateTime startTime = DateTime.Now;
-            TimeSpan deltaTime = startTime - endTime;
-            int milliseconds = deltaTime.Milliseconds > 0 ? deltaTime.Milliseconds : 1;
-            currentFps = 1000 / milliseconds;
-            Update(currentFps);
-            Draw();
-            endTime = DateTime.Now;
+            DateTime startTime = DateTime.Now; //Log start time
+            TimeSpan deltaTime = startTime - endTime; //Time it took since last loop
+            int milliseconds = deltaTime.Milliseconds > 0 ? deltaTime.Milliseconds : 1; //Get milliseconds since last gameloop from the deltatime
+            currentFps = 1000 / milliseconds; //Calculates current fps
+            Update(currentFps);// Updates the game
+            Draw(); //Draws the game
+            endTime = DateTime.Now; //Log end time
         }
 
         public GameWorld(Graphics dc, Rectangle displayRectangle)
