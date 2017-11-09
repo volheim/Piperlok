@@ -55,23 +55,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FPowerUps\Cola.cs" />
-    <Compile Include="FPowerUps\ElefantØl.cs" />
-    <Compile Include="FPowerUps\PowerUps.cs" />
-    <Compile Include="GameObejcts\Box.cs" />
-    <Compile Include="GameObejcts\ColaMachine.cs" />
-    <Compile Include="GameObejcts\Objects.cs" />
-    <Compile Include="GameObejcts\PowerBox.cs" />
-    <Compile Include="GameObejcts\PowerPlate.cs" />
-    <Compile Include="GameObejcts\PowerSwitch.cs" />
-    <Compile Include="GameObejcts\WalkableTerrain.cs" />
     <Compile Include="GameWorld.cs" />
-    <Compile Include="Interfaces\Icollideable.cs" />
-    <Compile Include="Interfaces\IEnemy.cs" />
-    <Compile Include="Interfaces\IGravity.cs" />
-    <Compile Include="Interfaces\Iinteractable.cs" />
-    <Compile Include="Interfaces\IMoveable.cs" />
-    <Compile Include="Interfaces\Ipower.cs" />
     <Compile Include="Keyboard.cs" />
     <Compile Include="Milo_MacDonald.cs" />
     <Compile Include="Objects.cs" />
@@ -80,6 +64,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TechZombie.cs" />
+    <Compile Include="Vector2D.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,93 +91,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Content Include="Sprites\BGs\Background01.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\BGs\Background02.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-=======
-    <Content Include="Images\Actors\Piperlok.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Images\BGs\Background01.png" />
-    <Content Include="Images\BGs\Background02.png" />
-    <Content Include="Images\Platforms\BaseBlock.png" />
-    <Content Include="Images\Platforms\BaseBlockB.png" />
-    <Content Include="Images\Platforms\BaseBlockBL.png" />
-    <Content Include="Images\Platforms\BaseBlockBR.png" />
-    <Content Include="Images\Platforms\BaseBlockBRL.png" />
-    <Content Include="Images\Platforms\BaseBlockBT.png" />
-    <Content Include="Images\Platforms\BaseBlockBTL.png" />
-    <Content Include="Images\Platforms\BaseBlockBTR.png" />
-    <Content Include="Images\Platforms\BaseBlockL.png" />
-    <Content Include="Images\Platforms\BaseBlockR.png" />
-    <Content Include="Images\Platforms\BaseBlockRL.png" />
-    <Content Include="Images\Platforms\BaseBlockT.png" />
-    <Content Include="Images\Platforms\BaseBlockTL.png" />
-    <Content Include="Images\Platforms\BaseBlockTR.png" />
-    <Content Include="Images\Platforms\BaseBlockTRL.png" />
->>>>>>> origin/MuukelseEdits
     <Content Include="Sprites\Piperlok.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\PiperlokAnim\sprite_0.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\PiperlokAnim\sprite_1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\PiperlokAnim\sprite_2.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\PiperlokAnim\sprite_3.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlock.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockB.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockBL.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockBR.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockBRL.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockBT.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockBTL.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockBTR.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockL.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockR.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockRL.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockT.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockTL.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockTR.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Platforms\BaseBlockTRL.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

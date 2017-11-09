@@ -18,14 +18,14 @@ namespace Piperlok
 
         Graphics sprite;
 
-        PointF position;
+        
 
         string name;
 
         //højere værdi gør det sværre at flytte et objekt
         float weight;
 
-        public Objects (bool moveable, bool power, bool dangerous, Graphics sprite, PointF position, string name, float weight)
+        public Objects (bool moveable, bool power, bool dangerous, Graphics sprite, Vector2D position, string name, float weight)
         {
 
         }
