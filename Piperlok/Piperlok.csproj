@@ -106,7 +106,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\Actors\Piperlok.png" />
+    <Content Include="Images\Actors\Piperlok.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\BGs\Background01.png" />
     <Content Include="Images\BGs\Background02.png" />
     <Content Include="Images\Platforms\BaseBlock.png" />
