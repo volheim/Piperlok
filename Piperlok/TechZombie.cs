@@ -12,7 +12,7 @@ namespace Piperlok
 
         int damage;
 
-        public TechZombie(float speed, int health, PointF startPosition, Graphics sprite, int damage)
+        public TechZombie(string imagePaths, float speed, int health, PointF startPosition) : base(speed, imagePaths, startPosition)
         {
 
         }
@@ -22,10 +22,7 @@ namespace Piperlok
 
         }
 
-        public override void Movement()
-        {
-            
-        }
+        
 
         public override void Collide()
         {
