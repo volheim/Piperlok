@@ -16,7 +16,11 @@ namespace Piperlok
         public string name;
         
 
+<<<<<<< HEAD
         public PointF position;
+=======
+        Vector2D position;
+>>>>>>> origin/ReBrachingMikkel
         public Image sprite;
 
         public float gravityPull;
@@ -31,7 +35,11 @@ namespace Piperlok
 
         }
         
+<<<<<<< HEAD
         public Actors(float speed, string imagePath, PointF startposition)
+=======
+        public Actors(float speed, string imagePath, Vector2D startposition)
+>>>>>>> origin/ReBrachingMikkel
         {
             animationSpeed = 5;
             string[] imagePaths = imagePath.Split(';');
@@ -58,7 +66,11 @@ namespace Piperlok
 
         public void Draw(Graphics dc)
         {
+<<<<<<< HEAD
             dc.DrawImage(sprite, position.X, position.Y, sprite.Width, sprite.Height);
+=======
+            dc.DrawImage(sprite, position.X , position.Y, sprite.Width, sprite.Height);
+>>>>>>> origin/ReBrachingMikkel
         }
 
         public void UpdateAnimations(float fps)

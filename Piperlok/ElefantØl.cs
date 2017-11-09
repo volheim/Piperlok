@@ -12,7 +12,7 @@ namespace Piperlok
         //mængden af liv som heales
         public int healVal;
 
-        public ElefantØl(int healVal, PointF position, Graphics sprite)
+        public ElefantØl(int healVal, Vector2D position, Graphics sprite)
         {
 
         }

@@ -12,7 +12,11 @@ namespace Piperlok
 
         int damage;
 
+<<<<<<< HEAD
         public Milo_MacDonald(string imagePaths, float speed, int health, PointF startPosition) : base(speed, imagePaths, startPosition)
+=======
+        public Milo_MacDonald(string imagePaths, float speed, int health, Vector2D startPosition) : base(speed, imagePaths, startPosition)
+>>>>>>> origin/ReBrachingMikkel
         {
 
             name = "Milo MacDonald";

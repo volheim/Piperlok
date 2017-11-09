@@ -16,15 +16,27 @@ namespace Piperlok
 
         public RectangleF collisionBox;
 
+<<<<<<< HEAD
         
+=======
+        Vector2D position;
+>>>>>>> origin/ReBrachingMikkel
 
-        bool grounded;
+        bool grounded = true;
 
+<<<<<<< HEAD
         public Piperlok(string imagePaths, float speed, int health, PointF startPosition) : base(speed, imagePaths, startPosition)
         {
             name = "Piperlok";
             //skab en sprite og collision box til piperlok
 
+=======
+        public Piperlok(string imagePaths, float speed, int health, Vector2D startposition) : base(speed, imagePaths, startposition)
+        {
+            name = "Piperlok";
+            //skab en sprite og collision box til piperlok
+            position = startposition;
+>>>>>>> origin/ReBrachingMikkel
 
             /*Graphics sprite = Graphics.FromImage(@"imagePaths");
             collisionBox.Height = piperlokSprite.Height;
@@ -35,6 +47,10 @@ namespace Piperlok
 
         public override void Update(float fps)
         {
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/ReBrachingMikkel
             Gravity();
             if (Keyboard.IsKeyDown(Keys.A))
             {
@@ -80,7 +96,7 @@ namespace Piperlok
 
             //udregner hoppet som en fysisk bevægelse, hoppet bliver langsommere
             float netMove;
-            netMove = jumpHeightLeft - gravityPull * Form1.currentFps;
+            netMove = (jumpHeightLeft - gravityPull) * Form1.currentFps;
             jumpHeightLeft =-gravityPull * Form1.currentFps;
 
             //sætter en terminal velocity

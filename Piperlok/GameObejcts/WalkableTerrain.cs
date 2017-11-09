@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
 using Piperlok.Interfaces;
 
 namespace Piperlok.GameObejcts
@@ -13,5 +14,12 @@ namespace Piperlok.GameObejcts
         {
             throw new NotImplementedException();
         }
+=======
+
+namespace Piperlok.GameObejcts
+{
+    class WalkableTerrain
+    {
+>>>>>>> origin/ReBrachingMikkel
     }
 }

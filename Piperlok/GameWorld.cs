@@ -25,7 +25,11 @@ namespace Piperlok
             endTime = DateTime.Now;
             actorList = new List<Actors>();
             objList = new List<Objects>();
+<<<<<<< HEAD
             actorList.Add(new Piperlok(@"Sprites\Piperlok.png", 15, 3, new PointF(0, 0)));
+=======
+            actorList.Add(new Piperlok(@"Sprites\Piperlok.png", 15, 3, new Vector2D(1.5f, 3.0f)));
+>>>>>>> origin/ReBrachingMikkel
         }
 
         public void Update(float fps)

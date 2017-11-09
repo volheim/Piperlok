@@ -14,7 +14,11 @@ namespace Piperlok
         //et skud fra kameraet
         Object bullet;
 
+<<<<<<< HEAD
         public Camera(string imagePaths, float speed, int health, PointF startPosition) : base(speed, imagePaths, startPosition)
+=======
+        public Camera(string imagePaths, float speed, int health, Vector2D startPosition) : base(speed, imagePaths, startPosition)
+>>>>>>> origin/ReBrachingMikkel
         {
 
         }
