@@ -52,6 +52,7 @@
     <Compile Include="GameObejcts\Objects.cs" />
     <Compile Include="GameObejcts\PowerBox.cs" />
     <Compile Include="GameObejcts\PowerSwitch.cs" />
+    <Compile Include="GameObejcts\WalkableTerrain.cs" />
     <Compile Include="Interfaces\IEnemy.cs" />
     <Compile Include="Interfaces\IGravity.cs" />
     <Compile Include="Interfaces\Iinteractable.cs" />
