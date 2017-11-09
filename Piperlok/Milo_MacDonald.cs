@@ -12,7 +12,7 @@ namespace Piperlok
 
         int damage;
 
-        public Milo_MacDonald(float speed, int health, PointF startPosition, Graphics sprite, int damage)
+        public Milo_MacDonald(string imagePaths, float speed, int health, PointF startPosition) : base(speed, imagePaths, startPosition)
         {
 
             name = "Milo MacDonald";
@@ -24,10 +24,7 @@ namespace Piperlok
 
         }
 
-        public override void Movement()
-        {
-
-        }
+       
 
         public override void Collide()
         {
