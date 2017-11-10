@@ -12,11 +12,7 @@ namespace Piperlok
 
         int damage;
 
-<<<<<<< HEAD
         public TechZombie(string imagePaths, float speed, int health, Vector2D startPosition) : base(speed, imagePaths, startPosition)
-=======
-        public TechZombie(string imagePaths, float speed, int health, PointF startPosition) : base(speed, imagePaths, startPosition)
->>>>>>> origin/Skywalker
         {
 
         }
