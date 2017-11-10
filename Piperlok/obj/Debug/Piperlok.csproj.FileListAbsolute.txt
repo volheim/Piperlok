@@ -9,17 +9,19 @@ C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.Generate
 C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
 C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.exe
 C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
-C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok.png
-C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\bin\Debug\Piperlok.exe.config
-C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\bin\Debug\Piperlok.exe
-C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\bin\Debug\Piperlok.pdb
-C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.csprojResolveAssemblyReference.cache
-C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.Form1.resources
-C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.Properties.Resources.resources
-C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.GenerateResource.Cache
-C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
-C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.exe
-C:\Users\MIKZ\Source\Repos\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
+<<<<<<< HEAD
+C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csprojResolveAssemblyReference.cache
+C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.Form1.resources
+C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.Properties.Resources.resources
+C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.GenerateResource.Cache
+C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
+C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.exe
+C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
+C:\Users\MIKZ\source\repos\Piperlok\Piperlok\bin\Debug\Piperlok.exe.config
+C:\Users\MIKZ\source\repos\Piperlok\Piperlok\bin\Debug\Piperlok.exe
+C:\Users\MIKZ\source\repos\Piperlok\Piperlok\bin\Debug\Piperlok.pdb
+C:\Users\MIKZ\source\repos\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok.png
+=======
 C:\Users\MIKZ\Desktop\Ny mappe\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok.png
 C:\Users\MIKZ\Desktop\Ny mappe\Piperlok\Piperlok\bin\Debug\Piperlok.exe.config
 C:\Users\MIKZ\Desktop\Ny mappe\Piperlok\Piperlok\bin\Debug\Piperlok.exe
@@ -31,3 +33,70 @@ C:\Users\MIKZ\Desktop\Ny mappe\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.Gener
 C:\Users\MIKZ\Desktop\Ny mappe\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
 C:\Users\MIKZ\Desktop\Ny mappe\Piperlok\Piperlok\obj\Debug\Piperlok.exe
 C:\Users\MIKZ\Desktop\Ny mappe\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe.config
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.pdb
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csprojResolveAssemblyReference.cache
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.Form1.resources
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.Properties.Resources.resources
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.GenerateResource.Cache
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.exe
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
+>>>>>>> origin/ReBrachingMikkel
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\Background01.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\Background02.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\drink.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\stand.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_00.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_01.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_02.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_03.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_04.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_05.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_06.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_07.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlock.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockB.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockBL.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockBR.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockBRL.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockBT.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockBTL.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockBTR.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockL.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockR.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockRL.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockT.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockTL.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockTR.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockTRL.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe.config
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.pdb
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csprojResolveAssemblyReference.cache
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.Form1.resources
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.Properties.Resources.resources
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.GenerateResource.Cache
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.exe
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe.config
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.pdb
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csprojResolveAssemblyReference.cache
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.Form1.resources
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.Properties.Resources.resources
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.GenerateResource.Cache
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.exe
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
+>>>>>>> origin/Skywalker
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Images\Actors\Piperlok.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\PiperlokAnim\sprite_0.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\PiperlokAnim\sprite_1.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\PiperlokAnim\sprite_2.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\PiperlokAnim\sprite_3.png
