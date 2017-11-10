@@ -9,22 +9,24 @@ namespace Piperlok
 {
     class Objects
     {
+#region Fields
         //objektet kan flyttes af spilleren
         bool moveable;
-        //objektet kan aktivere visse andre objekter
-        bool power;
-        //objekter giver skade på kollision
-        bool dangerous;
-
+        bool Collideable;
         Graphics sprite;
-
-        
-
         string name;
+        
+        Vector2D position;
+        #endregion
 
-        //højere værdi gør det sværre at flytte et objekt
-        float weight;
-
+        //Property for returning a collision rectangle with the correct size and position
+        public Rectangle CollisionBox
+        {
+            get
+            {
+                return new RectangleF(position.X, position.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
+            }
+        }
         public Objects (bool moveable, bool power, bool dangerous, Graphics sprite, Vector2D position, string name, float weight)
         {
 
