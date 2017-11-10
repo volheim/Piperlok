@@ -12,17 +12,20 @@ namespace Piperlok
         #region Fields
         //objektet kan flyttes af spilleren
         protected bool moveable;
-        protected bool Collideable;
+        protected bool collideable;
         protected string name;
         protected Vector2D position;
         protected Image sprite;
         #endregion
 
-        public Objects(Vector2D startposition, string imagePath)
+        public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name)
         {
-            position = startposition;
+            this.moveable = moveable;
+            this.collideable = collideable;
+            sprite = Image.FromFile(imagePath);
+            this.position = position;
+            this.name = name;
         }
-
         //Property for returning a collision rectangle with the correct size and position
         public RectangleF CollisionBox
         {
@@ -31,10 +34,7 @@ namespace Piperlok
                 return new RectangleF(position.X, position.Y, sprite.Width, /** scaleFactor,*/ sprite.Height /** scaleFactor*/);
             }
         }
-        public Objects(bool moveable, bool power, bool dangerous, Graphics sprite, Vector2D position, string name, float weight)
-        {
 
-        }
 
         public void Update(float fps)
         {
