@@ -16,9 +16,14 @@ namespace Piperlok
 
         public RectangleF collisionBox;
 
+<<<<<<< HEAD
+=======
+        
+>>>>>>> origin/Skywalker
 
         Vector2D position;
 
+<<<<<<< HEAD
         bool grounded = true;
 
         public Piperlok(string imagePaths, float speed, int health, Vector2D startposition) : base(speed, imagePaths, startposition)
@@ -31,6 +36,21 @@ namespace Piperlok
 
         }
 
+=======
+        public Piperlok(string imagePaths, float speed, int health, PointF startPosition) : base(speed, imagePaths, startPosition)
+        {
+            name = "Piperlok";
+            //skab en sprite og collision box til piperlok
+
+
+            /*Graphics sprite = Graphics.FromImage(@"imagePaths");
+            collisionBox.Height = piperlokSprite.Height;
+            collisionBox.Width = piperlokSprite.Width;*/
+
+            //sætter piperlok i midten af skærmen
+        }
+
+>>>>>>> origin/Skywalker
         public override void Update(float fps)
         {
             Gravity();

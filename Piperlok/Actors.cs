@@ -14,10 +14,15 @@ namespace Piperlok
         public float speed;
         public int health;
         public string name;
+        
 
+<<<<<<< HEAD
 
         Vector2D position;
 
+=======
+        public PointF position;
+>>>>>>> origin/Skywalker
         public Image sprite;
 
         public float gravityPull;
@@ -32,6 +37,7 @@ namespace Piperlok
 
         }
         
+<<<<<<< HEAD
 
         public Actors(float speed, string imagePath, Vector2D startposition)
         {
@@ -40,6 +46,15 @@ namespace Piperlok
             this.position = startposition;
             this.animationFrames = new List<Image>();
 
+=======
+        public Actors(float speed, string imagePath, PointF startposition)
+        {
+            animationSpeed = 5;
+            string[] imagePaths = imagePath.Split(';');
+            this.position = startposition;
+            this.animationFrames = new List<Image>();
+
+>>>>>>> origin/Skywalker
             foreach (string path in imagePaths)
             {
                 animationFrames.Add(Image.FromFile(path));
@@ -60,7 +75,10 @@ namespace Piperlok
 
         public void Draw(Graphics dc)
         {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Skywalker
             dc.DrawImage(sprite, position.X, position.Y, sprite.Width, sprite.Height);
         }
 
