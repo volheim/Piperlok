@@ -17,6 +17,7 @@ namespace Piperlok
         public RectangleF collisionBox;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 =======
         Vector2D position;
@@ -37,6 +38,17 @@ namespace Piperlok
             //skab en sprite og collision box til piperlok
             position = startposition;
 >>>>>>> origin/ReBrachingMikkel
+=======
+        Vector2D position;
+
+        bool grounded = true;
+
+        public Piperlok(string imagePaths, float speed, int health, Vector2D startposition) : base(speed, imagePaths, startposition)
+        {
+            name = "Piperlok";
+            //skab en sprite og collision box til piperlok
+            position = startposition;
+>>>>>>> 23872359dd5181df5f022fc9378fc945d816f658
 
             /*Graphics sprite = Graphics.FromImage(@"imagePaths");
             collisionBox.Height = piperlokSprite.Height;
@@ -48,9 +60,13 @@ namespace Piperlok
         public override void Update(float fps)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             
 >>>>>>> origin/ReBrachingMikkel
+=======
+            
+>>>>>>> 23872359dd5181df5f022fc9378fc945d816f658
             Gravity();
             if (Keyboard.IsKeyDown(Keys.A))
             {
