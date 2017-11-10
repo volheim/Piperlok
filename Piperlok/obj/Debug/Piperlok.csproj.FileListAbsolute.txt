@@ -95,3 +95,8 @@ C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreC
 C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.exe
 C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
 >>>>>>> origin/Skywalker
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Images\Actors\Piperlok.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\PiperlokAnim\sprite_0.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\PiperlokAnim\sprite_1.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\PiperlokAnim\sprite_2.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\PiperlokAnim\sprite_3.png
