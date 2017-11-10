@@ -10,7 +10,6 @@ C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreComp
 C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.exe
 C:\Users\Allan\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
 <<<<<<< HEAD
-<<<<<<< HEAD
 C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csprojResolveAssemblyReference.cache
 C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.Form1.resources
 C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.Properties.Resources.resources
@@ -84,7 +83,6 @@ C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.Gene
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.exe
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
-=======
 C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok.png
 C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe.config
 C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe

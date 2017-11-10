@@ -7,17 +7,13 @@ using Piperlok.Interfaces;
 
 namespace Piperlok.GameObejcts
 {
-<<<<<<< HEAD
+
     class PowerBox : Object, IMoveable, Icollideable
     {
         public void Checkcollision()
         {
             throw new NotImplementedException();
         }
-=======
-    class PowerBox: Object , IMoveable, Icollideable
-    {
 
->>>>>>> origin/ReBrachingMikkel
     }
 }
