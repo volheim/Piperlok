@@ -14,17 +14,10 @@ namespace Piperlok
         public float speed;
         public int health;
         public string name;
-        
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        public PointF position;
-=======
+
         Vector2D position;
->>>>>>> origin/ReBrachingMikkel
-=======
-        Vector2D position;
->>>>>>> 23872359dd5181df5f022fc9378fc945d816f658
+
         public Image sprite;
 
         public float gravityPull;
@@ -39,15 +32,8 @@ namespace Piperlok
 
         }
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-        public Actors(float speed, string imagePath, PointF startposition)
-=======
+
         public Actors(float speed, string imagePath, Vector2D startposition)
->>>>>>> origin/ReBrachingMikkel
-=======
-        public Actors(float speed, string imagePath, Vector2D startposition)
->>>>>>> 23872359dd5181df5f022fc9378fc945d816f658
         {
             animationSpeed = 5;
             string[] imagePaths = imagePath.Split(';');
@@ -74,15 +60,8 @@ namespace Piperlok
 
         public void Draw(Graphics dc)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             dc.DrawImage(sprite, position.X, position.Y, sprite.Width, sprite.Height);
-=======
-            dc.DrawImage(sprite, position.X , position.Y, sprite.Width, sprite.Height);
->>>>>>> origin/ReBrachingMikkel
-=======
-            dc.DrawImage(sprite, position.X , position.Y, sprite.Width, sprite.Height);
->>>>>>> 23872359dd5181df5f022fc9378fc945d816f658
         }
 
         public void UpdateAnimations(float fps)
