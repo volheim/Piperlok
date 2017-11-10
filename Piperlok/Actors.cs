@@ -103,7 +103,7 @@ namespace Piperlok
         {
             get
             {
-                return new RectangleF(position.X, position.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
+                return new RectangleF(position.X, position.Y, sprite.Width /* scaleFactor*/, sprite.Height /** scaleFactor*/);
             }
         }
 
@@ -113,17 +113,14 @@ namespace Piperlok
         {
             return CollisionBox.IntersectsWith(other.CollisionBox);
         }
-        public bool IsCollidingWith(Object other)
-        {
-            return CollisionBox.IntersectsWith(other.CollisionBox);
-        }
-        public bool IsCollidingWith(PowerUps other)
+        public bool IsCollidingWith(Objects other)
         {
             return CollisionBox.IntersectsWith(other.CollisionBox);
         }
 
         //This method is called whenever a collision happens
         public abstract void OnCollision(Actors other);
+        public abstract void OnCollision(Objects other);
 
         private void CheckCollision()
         {
@@ -147,7 +144,6 @@ namespace Piperlok
             foreach (Objects go in GameWorld.objList)
             {
               
-                
                     if (this.IsCollidingWith(go))
                     {
                         OnCollision(go);

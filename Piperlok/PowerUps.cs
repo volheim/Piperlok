@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Piperlok
 {
-    class PowerUps
+    class PowerUps : Objects
     {
         public bool active;
 
@@ -16,25 +16,13 @@ namespace Piperlok
 
         public Vector2D position;
 
+        public PowerUps(Vector2D startposition, string imagePath) : base(startposition, imagePath)
+        {
+        }
+
         public void Update(float fps)
         {
 
-        }
-
-        public Rectangle CollisionBox
-        {
-            get
-            {
-                return new RectangleF(position.X, position.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
-            }
-        }
-
-        public virtual void OnCollision(Actors other)
-        {
-            if (other is Actors)
-            {
-                //We are colliding with an other actor
-            }
         }
     }
 
