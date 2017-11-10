@@ -41,5 +41,10 @@ namespace Piperlok
                 //The "enemy" is colliding with Piperlok
             }
         }
+
+        public override void OnCollision(Objects other)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

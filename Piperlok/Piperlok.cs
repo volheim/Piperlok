@@ -106,5 +106,10 @@ namespace Piperlok
                 //We are colliding with an other actor
             }
         }
+
+        public override void OnCollision(Objects other)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
