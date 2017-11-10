@@ -12,7 +12,7 @@ namespace Piperlok
         //bruges når colaen kastes
         public float speed;
 
-        public Cola(PointF position, Graphics sprite)
+        public Cola(Vector2D position, Graphics sprite)
         {
 
         }

@@ -16,7 +16,8 @@ namespace Piperlok
         public string name;
         
 
-        public PointF position;
+        Vector2D position;
+
         public Image sprite;
 
         public float gravityPull;
@@ -31,7 +32,7 @@ namespace Piperlok
 
         }
         
-        public Actors(float speed, string imagePath, PointF startposition)
+        public Actors(float speed, string imagePath, Vector2D startposition)
         {
             animationSpeed = 5;
             string[] imagePaths = imagePath.Split(';');
