@@ -7,13 +7,11 @@ using Piperlok.Interfaces;
 
 namespace Piperlok.GameObejcts
 {
-
     class PowerBox : Object, IMoveable, Icollideable
     {
         public void Checkcollision()
         {
             throw new NotImplementedException();
         }
-
     }
 }
