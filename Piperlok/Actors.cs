@@ -65,11 +65,6 @@ namespace Piperlok
             this.scaleFactor = scaleFactor;
         }
 
-        public virtual void Collide()
-        {
-
-        }
-
         public virtual void Gravity()
         {
             

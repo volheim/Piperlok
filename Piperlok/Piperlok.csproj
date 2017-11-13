@@ -63,11 +63,10 @@
     <Compile Include="FPowerUps\PowerUps.cs" />
     <Compile Include="GameObejcts\Box.cs" />
     <Compile Include="GameObejcts\ColaMachine.cs" />
-    <Compile Include="GameObejcts\Objects.cs" />
     <Compile Include="GameObejcts\PowerBox.cs" />
     <Compile Include="GameObejcts\PowerPlate.cs" />
     <Compile Include="GameObejcts\PowerSwitch.cs" />
-    <Compile Include="GameObejcts\WalkableTerrain.cs" />
+    <Compile Include="WalkableTerrain.cs" />
     <Compile Include="GameWorld.cs" />
     <Compile Include="Interfaces\Icollideable.cs" />
     <Compile Include="Interfaces\IEnemy.cs" />

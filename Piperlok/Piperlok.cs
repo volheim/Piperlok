@@ -10,8 +10,8 @@ namespace Piperlok
 {
     class Piperlok : Actors
     {
-        
-        float jumpHeight;
+
+        float jumpHeight = 100;
         float jumpHeightLeft;
         float jumpTime;
 
@@ -109,12 +109,6 @@ namespace Piperlok
                 {
                     //If this object is colliding with the other object
                     //Then we have a collision
-                    if (this.IsCollidingWith(go))
-                    {
-                        //a collision has happend
-                        GameWorld.actorList.Remove(go);
-
-                    }
                 }
             }
         }
@@ -122,6 +116,10 @@ namespace Piperlok
         public override void OnCollision(Objects other)
         {
             throw new NotImplementedException();
+            if(other.Position.Y > this.position.X)
+            {
+                grounded = true;
+            }
         }
     }
 }
