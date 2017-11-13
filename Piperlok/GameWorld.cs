@@ -17,7 +17,8 @@ namespace Piperlok
         Graphics dc;
 
         static public List<Objects> objList;
-        static public List<Actors> actorList;
+        private static List<Actors> actorList;
+        private static List<Actors> romovedList;
         BufferedGraphics backBuffer;
 
         void SetupWorld()
@@ -25,21 +26,33 @@ namespace Piperlok
             endTime = DateTime.Now;
             actorList = new List<Actors>();
             objList = new List<Objects>();
+            romovedList = new List<Actors>();
 
             actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(1.5f, 520f),2f));
-            actorList.Add(new Camera(@"Enemy.png", 10, 100, new Vector2D(400f, 500f),0.1f));
-
+           actorList.Add(new Camera(@"Enemy.png", 10, 100, new Vector2D(400f, 500f),0.1f));
         }
 
-        public List<Actors> ActorList
+        public static List<Actors> ActorList
         {
             get { return actorList; }
             set { actorList = value; }
         }
-        
+
+        public static List<Actors> RomovedList
+        {
+            get { return romovedList; }
+            set { romovedList = value; }
+        }
 
         public void Update(float fps)
         {
+            if (romovedList != null)
+            {
+                foreach (Actors ac in romovedList)
+                {
+                    actorList.Remove(ac);
+                }
+            }
             foreach(Actors act in actorList)
             {
                 act.Update(Form1.currentFps);

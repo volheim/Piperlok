@@ -126,10 +126,10 @@ namespace Piperlok
         public abstract void OnCollision(Actors other);
         public abstract void OnCollision(Objects other);
 
-        private void CheckCollision()
+        public virtual void CheckCollision()
         {
             //Runs through all objects in the GameWorld
-            foreach (Actors go in GameWorld.actorList)
+            foreach (Actors go in GameWorld.ActorList)
             {
                 //If the Actors we are checking isn't itself
                 //This prevents them from colliding with itself
@@ -140,7 +140,6 @@ namespace Piperlok
                     if (this.IsCollidingWith(go))
                     {
                         //a collision has happend
-                            
 
                     }
                 }

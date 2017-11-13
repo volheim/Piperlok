@@ -10,7 +10,7 @@ namespace Piperlok
 {
     class Piperlok : Actors
     {
-        
+
         float jumpHeight;
         float jumpHeightLeft;
         float jumpTime;
@@ -90,18 +90,28 @@ namespace Piperlok
             //udregner hoppet som en fysisk bevægelse, hoppet bliver langsommere
             float netMove;
             netMove = (jumpHeightLeft - gravityPull) * Form1.currentFps;
-            jumpHeightLeft =-gravityPull * Form1.currentFps;
+            jumpHeightLeft = -gravityPull * Form1.currentFps;
 
             //sætter en terminal velocity
-            if(netMove < -2) { netMove = -2; }
+            if (netMove < -2) { netMove = -2; }
             position.Y += netMove * Form1.currentFps;
 
-            
+
         }
 
         public override void OnCollision(Actors other)
         {
-            foreach(Piperlok go in GameWorld.actorList)
+            GameWorld.RomovedList.Add(other);
+        }
+        public override void OnCollision(Objects other)
+        {
+        
+        }
+
+        public override void CheckCollision()
+        {
+            //Runs through all objects in the GameWorld
+            foreach (Actors go in GameWorld.ActorList)
             {
                 //If the Actors we are checking isn't itself
                 //This prevents them from colliding with itself
@@ -112,16 +122,16 @@ namespace Piperlok
                     if (this.IsCollidingWith(go))
                     {
                         //a collision has happend
-                        GameWorld.actorList.Remove(go);
+                        OnCollision(go);
+
 
                     }
                 }
-            }
-        }
 
-        public override void OnCollision(Objects other)
-        {
-            throw new NotImplementedException();
+            }
+
+
+
         }
     }
 }
