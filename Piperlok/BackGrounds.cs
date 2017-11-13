@@ -12,25 +12,24 @@ namespace Piperlok
         Vector2D position;
         Image sprite;
         private List<Image> backGround;
-        
+        float scaleFactor;
         
 
-        public BackGrounds(string imagepath, Vector2D startposition)
+        public BackGrounds(string imagePath, Vector2D startposition,float scaleFactor)
         {
-            string[] imagePaths = imagepath.Split(';');
+            string[] imagePaths = imagePath.Split(';');
             this.position = startposition;
             this.backGround = new List<Image>();
+            this.scaleFactor = scaleFactor;
 
-            foreach (string path in imagePaths)
-            {
-                backGround.Add(Image.FromFile(path));
-            }
-            this.sprite = this.backGround[0];
+            this.sprite = Image.FromFile(imagePath);
+
+            
         }
 
         public void Draw(Graphics dc)
         {
-            dc.DrawImage(sprite, position.X, position.Y, sprite.Width*2, sprite.Height*2);
+            dc.DrawImage(sprite, position.X, position.Y, sprite.Width*scaleFactor, sprite.Height*scaleFactor);
         }
 
         public Vector2D Position

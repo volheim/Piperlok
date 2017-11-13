@@ -15,9 +15,8 @@ namespace Piperlok
         public int health;
         public string name;
         public float scaleFactor;
-        private List<DeathList> deathlist = new List<DeathList>();
 
-        GameWorld GW;
+        
         Vector2D position;
 
         public Image sprite;

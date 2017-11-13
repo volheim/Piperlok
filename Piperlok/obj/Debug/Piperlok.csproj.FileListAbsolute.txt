@@ -73,3 +73,4 @@ C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe.config
 C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe
 C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.pdb
 C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Enemy.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\WholeBackground.png

@@ -16,9 +16,11 @@ namespace Piperlok
         BackGrounds bg;
         Graphics dc;
 
+
         static public List<Objects> objList;
         private static List<Actors> actorList;
         private static List<Actors> romovedList;
+        private static List<BackGrounds> backGrounds;
         BufferedGraphics backBuffer;
 
         void SetupWorld()
@@ -27,9 +29,31 @@ namespace Piperlok
             actorList = new List<Actors>();
             objList = new List<Objects>();
             romovedList = new List<Actors>();
+            backGrounds = new List<BackGrounds>();
 
             actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(1.5f, 520f),2f));
            actorList.Add(new Camera(@"Enemy.png", 10, 100, new Vector2D(400f, 500f),0.1f));
+
+
+
+
+
+
+
+
+
+
+
+
+            //BackGround
+            short x = -250;
+            for (int i = 0; i < 5; i++)
+            {
+
+                backGrounds.Add(new BackGrounds(@"Sprites\Backgrounds\WholeBackground.png", new Vector2D(x, 0), 1.1f));
+                x += 550;
+
+            }
         }
 
         public static List<Actors> ActorList
@@ -67,8 +91,12 @@ namespace Piperlok
 
         public void Draw()
         {
-            dc.Clear(Color.Black);
-            
+            dc.Clear(Color.White);
+            foreach (BackGrounds bg in backGrounds)
+            {
+                bg.Draw(dc);
+            }
+
 #if DEBUG
             Font f = new Font("Arial", 16);
             dc.DrawString(string.Format("FPS : {0}", currentFps), f, Brushes.Red, 2,2);
