@@ -14,8 +14,10 @@ namespace Piperlok
         public float speed;
         public int health;
         public string name;
-        
+        public float scaleFactor;
+        private List<DeathList> deathlist = new List<DeathList>();
 
+        GameWorld GW;
         Vector2D position;
 
         public Image sprite;
@@ -36,9 +38,9 @@ namespace Piperlok
             //Runs all GameObject's gamelogic
             CheckCollision();
         }
-        
+
         //Actors constructor
-        public Actors(float speed, string imagePath, Vector2D startposition)
+        public Actors(string imagePath, float speed, Vector2D startposition, float scaleFactor)
         {
             animationSpeed = 5;
 
@@ -59,6 +61,8 @@ namespace Piperlok
 
             //Selects a default sprite
             this.sprite = this.animationFrames[0];
+
+            this.scaleFactor = scaleFactor;
         }
 
         public virtual void Collide()
@@ -74,8 +78,8 @@ namespace Piperlok
 
         public void Draw(Graphics dc)
         {
-            dc.DrawImage(sprite, position.X, position.Y, sprite.Width, sprite.Height);
-            dc.DrawRectangle(new Pen(Brushes.Red), CollisionBox.X, CollisionBox.Y, CollisionBox.Width, CollisionBox.Height);
+            dc.DrawImage(sprite, position.X, position.Y, sprite.Width*scaleFactor, sprite.Height*scaleFactor);
+            dc.DrawRectangle(new Pen(Brushes.Red), CollisionBox.X, CollisionBox.Y, sprite.Width*scaleFactor, sprite.Height*scaleFactor);
         }
 
         //Updates the animation
@@ -103,7 +107,7 @@ namespace Piperlok
         {
             get
             {
-                return new RectangleF(position.X, position.Y, sprite.Width /* scaleFactor*/, sprite.Height /** scaleFactor*/);
+                return new RectangleF(position.X, position.Y, sprite.Width/10 /* scaleFactor*/, sprite.Height/10 /** scaleFactor*/);
             }
         }
 
@@ -136,7 +140,8 @@ namespace Piperlok
                     if (this.IsCollidingWith(go))
                     {
                         //a collision has happend
-                        OnCollision(go);
+                            
+
                     }
                 }
                 

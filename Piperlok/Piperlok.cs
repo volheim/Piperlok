@@ -25,7 +25,7 @@ namespace Piperlok
         bool grounded = true;
 
         //Piperlok's constructor
-        public Piperlok(string imagePaths, float speed, int health, Vector2D startposition) : base(speed, imagePaths, startposition)
+        public Piperlok(string imagePaths, float speed, int health, Vector2D startposition, float scaleFactor) : base(imagePaths, speed, startposition, scaleFactor)
         {
             name = "Piperlok";
             //skab en sprite og collision box til piperlok
@@ -101,9 +101,21 @@ namespace Piperlok
 
         public override void OnCollision(Actors other)
         {
-            if(other is Actors)
+            foreach(Piperlok go in GameWorld.actorList)
             {
-                //We are colliding with an other actor
+                //If the Actors we are checking isn't itself
+                //This prevents them from colliding with itself
+                if (go != this)
+                {
+                    //If this object is colliding with the other object
+                    //Then we have a collision
+                    if (this.IsCollidingWith(go))
+                    {
+                        //a collision has happend
+                        GameWorld.actorList.Remove(go);
+
+                    }
+                }
             }
         }
 

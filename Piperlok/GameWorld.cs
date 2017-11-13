@@ -13,12 +13,11 @@ namespace Piperlok
         DateTime endTime;
 
         float currentFps;
-
+        BackGrounds bg;
         Graphics dc;
 
         static public List<Objects> objList;
         static public List<Actors> actorList;
-        static public List<PowerUps> powerupList;
         BufferedGraphics backBuffer;
 
         void SetupWorld()
@@ -26,14 +25,18 @@ namespace Piperlok
             endTime = DateTime.Now;
             actorList = new List<Actors>();
             objList = new List<Objects>();
-            powerupList = new List<PowerUps>();
 
-            actorList.Add(new Piperlok(@"Sprites\Piperlok.png", 15, 3, new Vector2D(1.5f, 3.0f)));
-            powerupList.Add(new ElefantØl(1,new Vector2D(1.5f, 5f),@"Sprites\elefantøl.png","Beers"));
-            //powerupList.Add(new Cola(new Vector2D(1.5f, 10f), @"Sprites\Cola.png"));
-            //objList.Add(new Computer(new Vector2D(1.5f, 20f), @"Sprites\computer.png"));
-            //objList.Add(new Sodavandsautomat(new Vector2D(1.5f, 30f), @"Sprites\rocket.png"));
+            actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(1.5f, 520f),2f));
+            actorList.Add(new Camera(@"Enemy.png", 10, 100, new Vector2D(400f, 500f),0.1f));
+
         }
+
+        public List<Actors> ActorList
+        {
+            get { return actorList; }
+            set { actorList = value; }
+        }
+        
 
         public void Update(float fps)
         {
@@ -46,17 +49,13 @@ namespace Piperlok
             {
                 obj.Update(Form1.currentFps);
             }
-            foreach (PowerUps pow in powerupList)
-            {
-                pow.Update(Form1.currentFps);
-            }
             
         }
 
         public void Draw()
         {
             dc.Clear(Color.Black);
-
+            
 #if DEBUG
             Font f = new Font("Arial", 16);
             dc.DrawString(string.Format("FPS : {0}", currentFps), f, Brushes.Red, 2,2);
@@ -96,7 +95,6 @@ namespace Piperlok
             this.backBuffer = BufferedGraphicsManager.Current.Allocate(dc, displayRectangle);
 
             this.dc = backBuffer.Graphics;
-
             SetupWorld();
         }
     }

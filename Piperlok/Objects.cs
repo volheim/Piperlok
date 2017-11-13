@@ -16,22 +16,25 @@ namespace Piperlok
         protected string name;
         protected Vector2D position;
         protected Image sprite;
+        protected float scaleFactor;
         #endregion
 
-        public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name)
+        public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name, float scalefactor)
         {
             this.moveable = moveable;
             this.collideable = collideable;
             sprite = Image.FromFile(imagePath);
             this.position = position;
             this.name = name;
+            this.scaleFactor = scalefactor;
+
         }
         //Property for returning a collision rectangle with the correct size and position
         public RectangleF CollisionBox
         {
             get
             {
-                return new RectangleF(position.X, position.Y, sprite.Width, /** scaleFactor,*/ sprite.Height /** scaleFactor*/);
+                return new RectangleF(position.X, position.Y, sprite.Width, sprite.Height);
             }
         }
 
@@ -50,7 +53,7 @@ namespace Piperlok
         {
             if (other is Actors)
             {
-                //We are colliding with an other actor
+               
             }
         }
     }

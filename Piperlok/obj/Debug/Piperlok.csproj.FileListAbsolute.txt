@@ -24,3 +24,52 @@ C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.Gener
 C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
 C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.exe
 C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csprojResolveAssemblyReference.cache
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.Form1.resources
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.Properties.Resources.resources
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.GenerateResource.Cache
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.exe
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Images\Actors\Piperlok.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\drink.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\stand.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_00.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_01.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_02.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_03.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_04.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_05.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_06.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_07.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Background01.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Background02.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\cameraMrød.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\camerastang.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\cameraUrød.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\computer.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\elefantøl.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\g4968.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\rocket.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\switchoff.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\switchon.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlock.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockB.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockBL.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockBR.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockBRL.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockBT.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockBTL.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockBTR.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockL.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockR.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockRL.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockT.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockTL.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockTR.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockTRL.png
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe.config
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.pdb
+C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Enemy.png

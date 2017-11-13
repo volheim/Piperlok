@@ -12,7 +12,7 @@ namespace Piperlok
         
         int damage;
 
-        public TechZombie(string imagePaths, float speed, int health, Vector2D startPosition) : base(speed, imagePaths, startPosition)
+        public TechZombie(string imagePaths, float speed, int health, Vector2D startPosition, float scaleFactor) : base(imagePaths,speed, startPosition, scaleFactor)
         {
 
         }
