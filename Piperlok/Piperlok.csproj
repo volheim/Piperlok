@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\Desktop\Piperlok total overheat.cs" />
     <Compile Include="Actors.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="Cola.cs" />

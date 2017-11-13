@@ -24,3 +24,10 @@ C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.Gener
 C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
 C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.exe
 C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csprojResolveAssemblyReference.cache
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.Form1.resources
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.Properties.Resources.resources
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.GenerateResource.Cache
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.exe
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
