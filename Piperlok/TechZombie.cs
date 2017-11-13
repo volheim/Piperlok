@@ -9,7 +9,7 @@ namespace Piperlok
 {
     class TechZombie : Actors
     {
-
+        
         int damage;
 
         public TechZombie(string imagePaths, float speed, int health, Vector2D startPosition) : base(speed, imagePaths, startPosition)
@@ -19,7 +19,7 @@ namespace Piperlok
 
         public override void Update(float fps)
         {
-
+            base.Update(fps);
         }
 
         
@@ -32,6 +32,19 @@ namespace Piperlok
         public override void Gravity()
         {
             base.Gravity();
+        }
+
+        public override void OnCollision(Actors other)
+        {
+            if(other is Actors)
+            {
+                //The "enemy" is colliding with Piperlok
+            }
+        }
+
+        public override void OnCollision(Objects other)
+        {
+            throw new NotImplementedException();
         }
     }
 }

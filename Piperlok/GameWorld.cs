@@ -16,8 +16,9 @@ namespace Piperlok
 
         Graphics dc;
 
-        static List<Objects> objList;
-        static List<Actors> actorList;
+        static public List<Objects> objList;
+        static public List<Actors> actorList;
+        static public List<PowerUps> powerupList;
         BufferedGraphics backBuffer;
 
         void SetupWorld()
@@ -25,8 +26,13 @@ namespace Piperlok
             endTime = DateTime.Now;
             actorList = new List<Actors>();
             objList = new List<Objects>();
+            powerupList = new List<PowerUps>();
 
             actorList.Add(new Piperlok(@"Sprites\Piperlok.png", 15, 3, new Vector2D(1.5f, 3.0f)));
+            powerupList.Add(new ElefantØl(1,new Vector2D(1.5f, 5f),@"Sprites\elefantøl.png","Beers"));
+            //powerupList.Add(new Cola(new Vector2D(1.5f, 10f), @"Sprites\Cola.png"));
+            //objList.Add(new Computer(new Vector2D(1.5f, 20f), @"Sprites\computer.png"));
+            //objList.Add(new Sodavandsautomat(new Vector2D(1.5f, 30f), @"Sprites\rocket.png"));
         }
 
         public void Update(float fps)
@@ -39,6 +45,10 @@ namespace Piperlok
             foreach (Objects obj in objList)
             {
                 obj.Update(Form1.currentFps);
+            }
+            foreach (PowerUps pow in powerupList)
+            {
+                pow.Update(Form1.currentFps);
             }
             
         }
