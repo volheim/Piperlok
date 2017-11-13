@@ -112,7 +112,6 @@
     <Content Include="Images\Actors\Piperlok.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-<<<<<<< HEAD
     <Content Include="Sprites\Piperlok animation\drink.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -143,7 +142,6 @@
     <Content Include="Sprites\Piperlok animation\walk_07.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-=======
     <Content Include="Sprites\Background01.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -178,7 +176,6 @@
     <Content Include="Sprites\objekter\switchon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
->>>>>>> 4407671e8a8acd8efb99ca4651fb5c3e08d0948a
     <Content Include="Sprites\Piperlok.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
