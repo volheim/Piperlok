@@ -116,6 +116,7 @@
     <Content Include="Images\Actors\Piperlok.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+<<<<<<< HEAD
     <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_0.png" />
     <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_1.png" />
     <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_2.png" />
@@ -188,17 +189,21 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sprites\Piperlok animation\walk_04.png">
+=======
+    <Content Include="Sprites\Piperlok.png">
+>>>>>>> parent of 867448d... Sprites updated
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sprites\Piperlok animation\walk_05.png">
+    <Content Include="Sprites\PiperlokAnim\sprite_0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sprites\Piperlok animation\walk_06.png">
+    <Content Include="Sprites\PiperlokAnim\sprite_1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sprites\Piperlok animation\walk_07.png">
+    <Content Include="Sprites\PiperlokAnim\sprite_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+<<<<<<< HEAD
     <Content Include="Sprites\Background01.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -234,6 +239,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sprites\Piperlok.png">
+=======
+    <Content Include="Sprites\PiperlokAnim\sprite_3.png">
+>>>>>>> parent of 867448d... Sprites updated
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sprites\PiperlokAnim\sprite_0.png" />
