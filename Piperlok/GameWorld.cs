@@ -13,9 +13,10 @@ namespace Piperlok
         DateTime endTime;
 
         float currentFps;
-
+        BackGrounds bg;
         Graphics dc;
 
+        static List<BackGrounds> backGrounds;
         static List<Objects> objList;
         static List<Actors> actorList;
         BufferedGraphics backBuffer;
@@ -25,8 +26,16 @@ namespace Piperlok
             endTime = DateTime.Now;
             actorList = new List<Actors>();
             objList = new List<Objects>();
+            backGrounds = new List<BackGrounds>();
 
-            actorList.Add(new Piperlok(@"Sprites\Piperlok.png", 15, 3, new Vector2D(1.5f, 3.0f)));
+            backGrounds.Add(new BackGrounds(@"Sprites\Background01.png", new Vector2D(-100f, 0f)));
+            backGrounds.Add(new BackGrounds(@"Sprites\Background02.png", new Vector2D(100f, 0f)));
+            backGrounds.Add(new BackGrounds(@"Sprites\Background01.png", new Vector2D(300f, 0f)));
+            backGrounds.Add(new BackGrounds(@"Sprites\Background02.png", new Vector2D(500f, 0f)));
+            backGrounds.Add(new BackGrounds(@"Sprites\Background01.png", new Vector2D(700f, 0f)));
+            backGrounds.Add(new BackGrounds(@"Sprites\Background02.png", new Vector2D(900f, 0f)));
+
+            actorList.Add(new Piperlok(@"Sprites\Piperlok.png", 15, 3, new Vector2D(3f, 400f)));
         }
 
         public void Update(float fps)
@@ -47,6 +56,11 @@ namespace Piperlok
         {
             dc.Clear(Color.Black);
 
+            foreach (BackGrounds BG in backGrounds)
+            {
+                BG.Draw(dc);
+            }
+            
 #if DEBUG
             Font f = new Font("Arial", 16);
             dc.DrawString(string.Format("FPS : {0}", currentFps), f, Brushes.Red, 2,2);

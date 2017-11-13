@@ -10,10 +10,10 @@ namespace Piperlok
     abstract class Actors
     {
         //bruges til at indikere om en actor er aktiv. kameraer som ikke er alive stopper, zombier er ikke længere farlige, piperlok og Milo MacDonald dør
-        public bool alive;
-        public float speed;
-        public int health;
-        public string name;
+        protected bool alive;
+        protected float speed;
+        protected int health;
+        protected string name;
         
 
         Vector2D position;
@@ -59,7 +59,7 @@ namespace Piperlok
 
         public void Draw(Graphics dc)
         {
-            dc.DrawImage(sprite, position.X, position.Y, sprite.Width, sprite.Height);
+            dc.DrawImage(sprite, position.X, position.Y, sprite.Width/5, sprite.Height/5);
         }
 
         public void UpdateAnimations(float fps)

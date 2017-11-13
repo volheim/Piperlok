@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Actors.cs" />
+    <Compile Include="BackGrounds.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="Cola.cs" />
     <Compile Include="ElefantØl.cs" />
@@ -107,22 +108,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Sprites\Background01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Background02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Actors\Piperlok.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sprites\Piperlok.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\PiperlokAnim\sprite_0.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\PiperlokAnim\sprite_1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\PiperlokAnim\sprite_2.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\PiperlokAnim\sprite_3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sprites\Platforms\BaseBlock.png">
@@ -170,6 +165,9 @@
     <Content Include="Sprites\Platforms\BaseBlockTRL.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sprites\PiperlokAnim\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
