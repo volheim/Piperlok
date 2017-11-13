@@ -10,18 +10,21 @@ namespace Piperlok
 {
     class Piperlok : Actors
     {
+        
         float jumpHeight;
         float jumpHeightLeft;
         float jumpTime;
 
+
         public RectangleF collisionBox;
 
-
+        //Refrence to Vector2D
         Vector2D position;
 
-
+        //bool to ensure that Piperlok is grounded or not
         bool grounded = true;
 
+        //Piperlok's constructor
         public Piperlok(string imagePaths, float speed, int health, Vector2D startposition) : base(speed, imagePaths, startposition)
         {
             name = "Piperlok";
@@ -32,9 +35,13 @@ namespace Piperlok
 
         }
 
+        //Piperloks Update funktion
         public override void Update(float fps)
         {
+            //Calls Gravity
             Gravity();
+
+            //Assigns different keys to Piperloks movement
             if (Keyboard.IsKeyDown(Keys.A))
             {
                 position.X -= ((1 / fps) * 150);
@@ -47,8 +54,11 @@ namespace Piperlok
             {
                 Jump();
             }
+
+            base.Update(fps);
         }
 
+        //Piperloks Jump funktion
         public void Jump()
         {
             grounded = false;
@@ -87,6 +97,19 @@ namespace Piperlok
             position.Y += netMove * Form1.currentFps;
 
             
+        }
+
+        public override void OnCollision(Actors other)
+        {
+            if(other is Actors)
+            {
+                //We are colliding with an other actor
+            }
+        }
+
+        public override void OnCollision(Objects other)
+        {
+            throw new NotImplementedException();
         }
     }
 }

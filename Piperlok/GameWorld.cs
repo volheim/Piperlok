@@ -13,12 +13,12 @@ namespace Piperlok
         DateTime endTime;
 
         float currentFps;
-        BackGrounds bg;
+
         Graphics dc;
 
-        static List<BackGrounds> backGrounds;
-        static List<Objects> objList;
-        static List<Actors> actorList;
+        static public List<Objects> objList;
+        static public List<Actors> actorList;
+        static public List<PowerUps> powerupList;
         BufferedGraphics backBuffer;
 
         void SetupWorld()
@@ -26,16 +26,13 @@ namespace Piperlok
             endTime = DateTime.Now;
             actorList = new List<Actors>();
             objList = new List<Objects>();
-            backGrounds = new List<BackGrounds>();
+            powerupList = new List<PowerUps>();
 
-            backGrounds.Add(new BackGrounds(@"Sprites\Background01.png", new Vector2D(-100f, 0f)));
-            backGrounds.Add(new BackGrounds(@"Sprites\Background02.png", new Vector2D(100f, 0f)));
-            backGrounds.Add(new BackGrounds(@"Sprites\Background01.png", new Vector2D(300f, 0f)));
-            backGrounds.Add(new BackGrounds(@"Sprites\Background02.png", new Vector2D(500f, 0f)));
-            backGrounds.Add(new BackGrounds(@"Sprites\Background01.png", new Vector2D(700f, 0f)));
-            backGrounds.Add(new BackGrounds(@"Sprites\Background02.png", new Vector2D(900f, 0f)));
-
-            actorList.Add(new Piperlok(@"Sprites\Piperlok.png", 15, 3, new Vector2D(3f, 400f)));
+            actorList.Add(new Piperlok(@"Sprites\Piperlok.png", 15, 3, new Vector2D(1.5f, 3.0f)));
+            powerupList.Add(new ElefantØl(1,new Vector2D(1.5f, 5f),@"Sprites\elefantøl.png","Beers"));
+            //powerupList.Add(new Cola(new Vector2D(1.5f, 10f), @"Sprites\Cola.png"));
+            //objList.Add(new Computer(new Vector2D(1.5f, 20f), @"Sprites\computer.png"));
+            //objList.Add(new Sodavandsautomat(new Vector2D(1.5f, 30f), @"Sprites\rocket.png"));
         }
 
         public void Update(float fps)
@@ -49,6 +46,10 @@ namespace Piperlok
             {
                 obj.Update(Form1.currentFps);
             }
+            foreach (PowerUps pow in powerupList)
+            {
+                pow.Update(Form1.currentFps);
+            }
             
         }
 
@@ -56,11 +57,6 @@ namespace Piperlok
         {
             dc.Clear(Color.Black);
 
-            foreach (BackGrounds BG in backGrounds)
-            {
-                BG.Draw(dc);
-            }
-            
 #if DEBUG
             Font f = new Font("Arial", 16);
             dc.DrawString(string.Format("FPS : {0}", currentFps), f, Brushes.Red, 2,2);

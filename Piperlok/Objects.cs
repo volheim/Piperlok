@@ -9,26 +9,32 @@ namespace Piperlok
 {
     class Objects
     {
+        #region Fields
         //objektet kan flyttes af spilleren
-        bool moveable;
-        //objektet kan aktivere visse andre objekter
-        bool power;
-        //objekter giver skade på kollision
-        bool dangerous;
+        protected bool moveable;
+        protected bool collideable;
+        protected string name;
+        protected Vector2D position;
+        protected Image sprite;
+        #endregion
 
-        Graphics sprite;
-
-        
-
-        string name;
-
-        //højere værdi gør det sværre at flytte et objekt
-        float weight;
-
-        public Objects (bool moveable, bool power, bool dangerous, Graphics sprite, Vector2D position, string name, float weight)
+        public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name)
         {
-
+            this.moveable = moveable;
+            this.collideable = collideable;
+            sprite = Image.FromFile(imagePath);
+            this.position = position;
+            this.name = name;
         }
+        //Property for returning a collision rectangle with the correct size and position
+        public RectangleF CollisionBox
+        {
+            get
+            {
+                return new RectangleF(position.X, position.Y, sprite.Width, /** scaleFactor,*/ sprite.Height /** scaleFactor*/);
+            }
+        }
+
 
         public void Update(float fps)
         {
@@ -38,6 +44,14 @@ namespace Piperlok
         public void Draw(Graphics dc)
         {
 
+        }
+
+        public virtual void OnCollision(Actors other)
+        {
+            if (other is Actors)
+            {
+                //We are colliding with an other actor
+            }
         }
     }
 }

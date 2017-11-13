@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Piperlok
 {
-    abstract class PowerUps
+    class PowerUps : Objects
     {
         public bool active;
 
@@ -15,5 +15,17 @@ namespace Piperlok
         public float duration;
 
         public Vector2D position;
+
+        public PowerUps(Vector2D startposition, string imagePath, string name) : base(false,true, imagePath, startposition, name)
+        {
+        }
+
+        public void Update(float fps)
+        {
+
+        }
     }
+
+
+
 }

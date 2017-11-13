@@ -11,10 +11,20 @@ namespace Piperlok
     {
         //mængden af liv som heales
         public int healVal;
+        Vector2D position;
 
-        public ElefantØl(int healVal, Vector2D position, Graphics sprite)
+        public ElefantØl(int healVal, Vector2D startposition, string imagePath,string name) : base(startposition, imagePath,name)
         {
+            position = startposition;
+        }
 
+        public override void OnCollision(Actors other)
+        {
+            if (other is Actors)
+            {
+                //PiperLok is colliding with an elephant beer
+            }
         }
     }
+
 }
