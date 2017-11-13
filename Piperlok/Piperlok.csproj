@@ -73,6 +73,7 @@
     <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="Interfaces\Ipower.cs" />
     <Compile Include="Keyboard.cs" />
+    <Compile Include="LevelReader.cs" />
     <Compile Include="Milo_MacDonald.cs" />
     <Compile Include="Objects.cs" />
     <Compile Include="Piperlok.cs" />
@@ -120,6 +121,13 @@
     <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_4.png" />
     <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_5.png" />
     <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_6.png" />
+    <Content Include="Sprites\Backgrounds\Backgrounds\Background_0.png" />
+    <Content Include="Sprites\Backgrounds\Backgrounds\Background_1.png" />
+    <Content Include="Sprites\Backgrounds\Backgrounds\Background_2.png" />
+    <Content Include="Sprites\Backgrounds\Backgrounds\Background_3.png" />
+    <Content Include="Sprites\Backgrounds\Backgrounds\Background_4.png" />
+    <Content Include="Sprites\Backgrounds\Backgrounds\Background_5.png" />
+    <Content Include="Sprites\Backgrounds\Backgrounds\Background_6.png" />
     <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_0.png" />
     <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_1.png" />
     <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_2.png" />
@@ -127,6 +135,7 @@
     <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_4.png" />
     <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_5.png" />
     <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_6.png" />
+<<<<<<< HEAD
     <Content Include="Sprites\Backgrounds\Background_0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -168,6 +177,15 @@
     </Content>
 =======
 >>>>>>> parent of ea93a37... Level Generator
+=======
+    <Content Include="Sprites\Backgrounds\Background_0.png" />
+    <Content Include="Sprites\Backgrounds\Background_1.png" />
+    <Content Include="Sprites\Backgrounds\Background_2.png" />
+    <Content Include="Sprites\Backgrounds\Background_3.png" />
+    <Content Include="Sprites\Backgrounds\Background_4.png" />
+    <Content Include="Sprites\Backgrounds\Background_5.png" />
+    <Content Include="Sprites\Backgrounds\Background_6.png" />
+>>>>>>> Mandag10.30Morten
     <Content Include="Sprites\Piperlok animation\drink.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
