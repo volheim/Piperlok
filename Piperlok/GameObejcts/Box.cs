@@ -13,5 +13,9 @@ namespace Piperlok.GameObejcts
         {
             throw new NotImplementedException();
         }
+        public Box(Vector2D startposition, string imagePath, string name, int level)
+        {
+
+        }
     }
 }

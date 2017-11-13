@@ -52,9 +52,11 @@
     <Compile Include="ElefantØl.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="FPowerUps\Cola.cs" />
     <Compile Include="FPowerUps\ElefantØl.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="GameObejcts\PowerPlate.cs" />
     <Compile Include="GameObejcts\PowerSwitch.cs" />
     <Compile Include="GameObejcts\WalkableTerrain.cs" />
+    <Compile Include="GameWorld.cs" />
     <Compile Include="Interfaces\Icollideable.cs" />
     <Compile Include="Interfaces\IEnemy.cs" />
     <Compile Include="Interfaces\IGravity.cs" />
@@ -73,6 +76,7 @@
     <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="Interfaces\Ipower.cs" />
     <Compile Include="Keyboard.cs" />
+    <Compile Include="LevelReader.cs" />
     <Compile Include="Milo_MacDonald.cs" />
     <Compile Include="Objects.cs" />
     <Compile Include="Piperlok.cs" />
@@ -84,6 +88,7 @@
     <Compile Include="Vector2D.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,6 +114,59 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\Actors\Piperlok.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_0.png" />
+    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_1.png" />
+    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_2.png" />
+    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_3.png" />
+    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_4.png" />
+    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_5.png" />
+    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_6.png" />
+    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_0.png" />
+    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_1.png" />
+    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_2.png" />
+    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_3.png" />
+    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_4.png" />
+    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_5.png" />
+    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_6.png" />
+    <Content Include="Sprites\Backgrounds\Background_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Levels\Screen1.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Levels\Screen1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Levels\Screen2.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Levels\Screen2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Levels\Screen3.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Levels\Screen3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sprites\Piperlok animation\drink.png">

@@ -11,7 +11,7 @@ namespace Piperlok
         public bool active;
         Vector2D position;
 
-        public Computer(Vector2D startposition, string imagePath,string name) : base(false, false, imagePath, startposition, name)
+        public Computer(Vector2D startposition, string imagePath,string name, int level) : base(false, false, imagePath, startposition, name, level)
         {
             position = startposition;
         }
