@@ -13,7 +13,7 @@ namespace Piperlok
         public int healVal;
         Vector2D position;
 
-        public ElefantØl(int healVal, Vector2D startposition, string imagePath,string name, int level) : base(startposition, imagePath,name,level)
+        public ElefantØl(int healVal, Vector2D startposition, string imagePath,string name) : base(startposition, imagePath,name)
         {
             position = startposition;
         }

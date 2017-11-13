@@ -18,7 +18,7 @@ namespace Piperlok
         protected Image sprite;
         #endregion
 
-        public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name, int level)
+        public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name)
         {
             this.moveable = moveable;
             this.collideable = collideable;

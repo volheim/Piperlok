@@ -16,7 +16,7 @@ namespace Piperlok
 
         public Vector2D position;
 
-        public PowerUps(Vector2D startposition, string imagePath, string name, int level) : base(false,true, imagePath, startposition, name, level)
+        public PowerUps(Vector2D startposition, string imagePath, string name) : base(false,true, imagePath, startposition, name)
         {
         }
 
