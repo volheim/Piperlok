@@ -154,7 +154,7 @@ namespace Piperlok
                     {
                         screen3[x, y] = 3;
                     }
-                    /*else if (level3.GetPixel(x, y) == Color.FromArgb(123,0,0))
+                    else if (level3.GetPixel(x, y) == Color.FromArgb(123,0,0))
                     {
                         screen3[x, y] = 4;
                     }
@@ -173,7 +173,7 @@ namespace Piperlok
                     else if (level3.GetPixel(x, y) == Color.FromArgb(0, 194, 255))
                     {
                         screen3[x, y] = 8;
-                    }*/
+                    }
                     else if (level3.GetPixel(x, y) == Color.FromArgb(252, 255, 0))
                     {
                         screen3[x, y] = 9;

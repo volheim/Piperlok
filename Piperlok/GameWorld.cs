@@ -65,7 +65,7 @@ namespace Piperlok
             {
                 for (int y = 0; y <= 14;)
                 {
-                    level1[x, y] = lr.screen3[x, y];
+                    level1[x, y] = lr.screen1[x, y];
                     if (level1[x, y] == 0)
                     {
                         //empty
@@ -73,7 +73,7 @@ namespace Piperlok
                     else if (level1[x, y] == 1)
                     {
                         //block
-                        objList.Add(new Block(false, true, @"Sprites\Platforms\BaseBlock.png", new Vector2D(x * 60, y * 60), "Block", 1, false));
+                        objList.Add(new Block(false, true, @"Sprites\Platforms\BaseBlock.png", new Vector2D((x) * 60, (y+1) * 60), "Block", 1, false));
                     }
                     else if (level1[x, y] == 2)
                     {
@@ -82,32 +82,32 @@ namespace Piperlok
                     else if (level1[x, y] == 3)
                     {
                         //tech zombie
-                        actorList.Add(new TechZombie(@"Sprites\ZombieAnim\zombie_00.png", 1, 1, new Vector2D(x * 60, y * 60), 5f, "zomb"));
+                        actorList.Add(new TechZombie(@"Sprites\ZombieAnim\zombie_00.png", 1, 1, new Vector2D((x) * 60, (y+1) * 60), 5f, "zomb"));
                     }
                     else if (level1[x, y] == 4)
                     {
                         //camera
-                        actorList.Add(new Camera(@"Sprites\objekter\cameraMrød.png", 10, 100, new Vector2D((x * 60), y * 60), 0.3f, "cam"));
+                        actorList.Add(new Camera(@"Sprites\objekter\cameraMrød.png", 10, 100, new Vector2D((x) * 60, (y+1) * 60), 0.3f, "cam"));
                     }
                     else if (level1[x, y] == 5)
                     {
                         //cola machine
-
+                        objList.Add(new Sodavandsautomat(new Vector2D(x * 60, (y + 1) * 60), @"Sprites\objekter\g4968.png","soda machine", 0.3f, false));
                     }
                     else if (level1[x, y] == 6)
                     {
                         //computer
-                        objList.Add(new Computer(new Vector2D(x * 60, y * 60), @"Sprites\objekter\computer.png", "computer", 0.3f, false));
+                        objList.Add(new Computer(new Vector2D((x) * 60, (y+1) * 60), @"Sprites\objekter\computer.png", "computer", 0.3f, false));
                     }
                     else if (level1[x, y] == 7)
                     {
-                        //switch
-                        objList.Add(new Lever(new Vector2D(x * 60, y * 60), @"Sprites\Objekter\switchoff.png", "LeverOFF", 0.2f, false));
+                        //lever
+                        objList.Add(new Lever(new Vector2D((x * 60)+25, (y+1) * 60), @"Sprites\Objekter\switchoff.png", "LeverOFF", 0.2f, false));
                     }
                     else if (level1[x, y] == 8)
                     {
                         //beer
-                        objList.Add(new ElefantØl(1, new Vector2D(x * 60, y * 60), @"Sprites\objekter\elefantøl.png", "Beer", 0.08f, true));
+                        objList.Add(new ElefantØl(1, new Vector2D((x) * 60, (y+1) * 60), @"Sprites\objekter\elefantøl.png", "Beer", 0.08f, true));
                     }
                     else if (level1[x, y] == 9)
                     {
