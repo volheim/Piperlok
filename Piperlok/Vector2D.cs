@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Drawing;
 
 namespace Piperlok
 {
+
     class Vector2D
     {
 
@@ -31,7 +31,6 @@ namespace Piperlok
             get { return this.y; }
             set { this.y = value; }
         }
-
-
     }
+
 }

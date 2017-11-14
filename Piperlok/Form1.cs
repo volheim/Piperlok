@@ -16,6 +16,8 @@ namespace Piperlok
         DateTime updateStart;
         DateTime updateEnd;
         Graphics dc;
+
+        //Defines the GameWorld
         GameWorld gw;
 
         public static float currentFps;
@@ -24,8 +26,6 @@ namespace Piperlok
         {
             InitializeComponent();
             timer1.Start();
-            
-
         }
 
         private void Tick1(object sender, EventArgs e)
@@ -38,6 +38,8 @@ namespace Piperlok
             currentFps = 1000 / milliseconds;
 
             endTime = DateTime.Now;
+
+            //Kalder vores GameLoop
             gw.GameLoop();
         }
 
@@ -47,7 +49,8 @@ namespace Piperlok
             {
                 dc = CreateGraphics();
             }
-
+            
+            //Instantiates the GameWorld
             Rectangle s = this.DisplayRectangle;
             gw = new GameWorld(CreateGraphics(), this.DisplayRectangle);
         }
