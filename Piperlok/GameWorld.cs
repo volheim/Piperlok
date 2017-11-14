@@ -13,11 +13,12 @@ namespace Piperlok
         int curentLevel;
         LevelReader lr = new LevelReader();
 
+
         int[,] level1 = new int[20,15];
 
         DateTime endTime;
 
-        float currentFps;
+        public float currentFps;
 
         Graphics dc;
 
@@ -25,11 +26,13 @@ namespace Piperlok
         static public List<PowerUps> powerupList;
         private static List<Actors> actorList;
         private static List<Objects> romovedList;
+        private static List<BackGrounds> bgList;
         BufferedGraphics backBuffer;
 
         void SetupWorld()
         {
 
+            bgList = new List<BackGrounds>();
             endTime = DateTime.Now;
             actorList = new List<Actors>();
             objList = new List<Objects>();
@@ -52,6 +55,10 @@ namespace Piperlok
             //objList.Add(new Computer(new Vector2D(1.5f, 20f), @"Sprites\computer.png"));
             //objList.Add(new Sodavandsautomat(new Vector2D(1.5f, 30f), @"Sprites\rocket.png"));
 
+            bgList.Add(new BackGrounds(@"Sprites\Backgrounds\Background_0.png;Sprites\Backgrounds\Background_1.png;Sprites\Backgrounds\Background_2.png;Sprites\Backgrounds\Background_4.png;Sprites\Backgrounds\Background_5.png;Sprites\Backgrounds\Background_6.png", new Vector2D(0, 0)));
+            bgList.Add(new BackGrounds(@"Sprites\Backgrounds\Background_0.png;Sprites\Backgrounds\Background_1.png;Sprites\Backgrounds\Background_2.png;Sprites\Backgrounds\Background_4.png;Sprites\Backgrounds\Background_5.png;Sprites\Backgrounds\Background_6.png", new Vector2D(600, 0)));
+
+
             lr.GenLevel1();
             lr.GenLevel2();
             lr.GenLevel3();
@@ -65,7 +72,7 @@ namespace Piperlok
             {
                 for (int y = 0; y <= 14;)
                 {
-                    level1[x, y] = lr.screen1[x, y];
+                    level1[x, y] = lr.screen3[x, y];
                     if (level1[x, y] == 0)
                     {
                         //empty
@@ -166,11 +173,16 @@ namespace Piperlok
         public void Draw()
         {
             dc.Clear(Color.Black);
+            
 
 #if DEBUG
             Font f = new Font("Arial", 16);
             dc.DrawString(string.Format("FPS : {0}", currentFps), f, Brushes.Red, 2,2);
 #endif
+            foreach (BackGrounds bg in bgList)
+            {
+                bg.Draw(dc);
+            }
             foreach (Actors act in actorList)
             {
                 act.Draw(dc);
