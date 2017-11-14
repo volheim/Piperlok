@@ -148,3 +148,10 @@ C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.pdb
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Levels\Screen1.bmp
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Levels\Screen2.bmp
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Levels\Screen3.bmp
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\Background_0.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\Background_1.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\Background_2.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\Background_3.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\Background_4.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\Background_5.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\Background_6.png

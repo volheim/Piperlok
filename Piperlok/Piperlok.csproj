@@ -129,20 +129,27 @@
     <Content Include="Levels\Screen3.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_0.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_1.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_2.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_3.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_4.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_5.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_6.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_0.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_1.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_2.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_3.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_4.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_5.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_6.png" />
+    <Content Include="Sprites\Backgrounds\Background_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Sprites\Piperlok animation\drink.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
