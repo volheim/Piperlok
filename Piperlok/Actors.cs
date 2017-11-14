@@ -40,7 +40,7 @@ namespace Piperlok
         }
 
         //Actors constructor
-        public Actors(string imagePath, float speed, Vector2D startposition, float scaleFactor)
+        public Actors(string imagePath, float speed, Vector2D startposition, float scaleFactor, string name)
         {
             animationSpeed = 5;
 
@@ -107,7 +107,7 @@ namespace Piperlok
         {
             get
             {
-                return new RectangleF(position.X, position.Y, sprite.Width/10 /* scaleFactor*/, sprite.Height/10 /** scaleFactor*/);
+                return new RectangleF(position.X, position.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
             }
         }
 
@@ -140,7 +140,7 @@ namespace Piperlok
                     if (this.IsCollidingWith(go))
                     {
                         //a collision has happend
-
+                        OnCollision(go);
                     }
                 }
                 

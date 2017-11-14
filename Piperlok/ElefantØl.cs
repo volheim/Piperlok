@@ -12,10 +12,15 @@ namespace Piperlok
         //mængden af liv som heales
         public int healVal;
         Vector2D position;
+        bool destroyable;
 
-        public ElefantØl(int healVal, Vector2D startposition, string imagePath,string name, float scaleFactor) : base(startposition, imagePath,name, scaleFactor)
+
+
+        public ElefantØl(int healVal, Vector2D startposition, string imagePath,string name, float scaleFactor, bool destroyable) : base(startposition, imagePath,name, scaleFactor, destroyable)
         {
             position = startposition;
+            destroyable = true;
+            
         }
 
         public override void OnCollision(Actors other)
@@ -25,6 +30,10 @@ namespace Piperlok
                 //PiperLok is colliding with an elephant beer
             }
         }
-    }
 
+        public override void Collide()
+        {
+            base.Collide();
+        }
+    }
 }

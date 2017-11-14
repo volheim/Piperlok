@@ -76,6 +76,7 @@
     <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="Interfaces\Ipower.cs" />
     <Compile Include="Keyboard.cs" />
+    <Compile Include="Lever.cs" />
     <Compile Include="Milo_MacDonald.cs" />
     <Compile Include="Objects.cs" />
     <Compile Include="Piperlok.cs" />

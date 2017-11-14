@@ -73,3 +73,26 @@ C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe.config
 C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.exe
 C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Piperlok.pdb
 C:\Users\Morten\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Enemy.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Enemy.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\drink.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\stand.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_00.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_01.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_02.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_03.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_04.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_05.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_06.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_07.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Background01.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Background02.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\cameraMrød.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\camerastang.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\cameraUrød.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\computer.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\elefantøl.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\g4968.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\rocket.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\switchoff.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\switchon.png
+C:\Users\Ejer\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csprojResolveAssemblyReference.cache

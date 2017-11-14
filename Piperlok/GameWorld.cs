@@ -18,7 +18,7 @@ namespace Piperlok
 
         static public List<Objects> objList;
         private static List<Actors> actorList;
-        private static List<Actors> romovedList;
+        private static List<Objects> romovedList;
         BufferedGraphics backBuffer;
 
         void SetupWorld()
@@ -26,10 +26,15 @@ namespace Piperlok
             endTime = DateTime.Now;
             actorList = new List<Actors>();
             objList = new List<Objects>();
-            romovedList = new List<Actors>();
+            romovedList = new List<Objects>();
 
-            actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(1.5f, 520f),2f));
-           actorList.Add(new Camera(@"Enemy.png", 10, 100, new Vector2D(400f, 500f),0.1f));
+            actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(1.5f, 580f),3f, "Player"));
+            actorList.Add(new Camera(@"Sprites\objekter\cameraMrød.png", 10, 100, new Vector2D(500f, 380f),0.3f));
+
+            objList.Add(new ElefantØl(1, new Vector2D(200f, 600f), @"Sprites\objekter\elefantøl.png", "Beer", 0.08f, true));
+            objList.Add(new Sodavandsautomat(new Vector2D(700f, 400f), @"Sprites\objekter\g4968.png", "SodaMachine", 0.2f, false));
+            objList.Add(new Lever(new Vector2D(350f, 500f), @"Sprites\Objekter\switchoff.png", "LeverOFF", 0.2f, false));
+            objList.Add(new)
         }
 
         public static List<Actors> ActorList
@@ -38,7 +43,13 @@ namespace Piperlok
             set { actorList = value; }
         }
 
-        public static List<Actors> RomovedList
+        public static List<Objects> ObjectList
+        {
+            get { return objList; }
+            set { objList = value; }
+        }
+
+        public static List<Objects> RomovedList
         {
             get { return romovedList; }
             set { romovedList = value; }
@@ -48,9 +59,9 @@ namespace Piperlok
         {
             if (romovedList != null)
             {
-                foreach (Actors ac in romovedList)
+                foreach (Objects ac in romovedList)
                 {
-                    actorList.Remove(ac);
+                    objList.Remove(ac);
                 }
             }
             foreach(Actors act in actorList)
@@ -68,11 +79,11 @@ namespace Piperlok
         public void Draw()
         {
             dc.Clear(Color.Black);
-            
+
 #if DEBUG
             Font f = new Font("Arial", 16);
             dc.DrawString(string.Format("FPS : {0}", currentFps), f, Brushes.Red, 2,2);
-#endif 
+#endif
             foreach (Actors act in actorList)
             {
                 act.Draw(dc);
