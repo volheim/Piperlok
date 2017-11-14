@@ -86,11 +86,11 @@ namespace Piperlok
 
             //udregner hoppet som en fysisk bevægelse, hoppet bliver langsommere
             float netMove;
-            netMove = (jumpHeightLeft - (gravityPull * Form1.currentFps / 50));
-            jumpHeightLeft = -gravityPull * (Form1.currentFps / 50);
+            netMove = (jumpHeightLeft - (gravityPull * Form1.currentFps / 10));
+            jumpHeightLeft = -gravityPull * (Form1.currentFps / 10);
 
             //sætter en terminal velocity
-            if (netMove < -2) { netMove = -1; }
+            if (netMove < -2) { netMove = -2; }
             position.Y -= netMove * (Form1.currentFps / 10);
 
 
@@ -121,9 +121,13 @@ namespace Piperlok
         }
         public override void OnCollision(Objects other)
         {
+            if (this.collisionBox.Bottom <= other.CollisionBox.Top)
+            {
                 grounded = true;
                 jumpHeightLeft = 0;
                 position.Y = other.CollisionBox.Top - collisionBox.Height;
+            }
+ 
             if (grounded)
             {
                 position.Y = other.CollisionBox.Top - collisionBox.Height;
