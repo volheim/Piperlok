@@ -136,11 +136,7 @@ namespace Piperlok
                     if (this.IsCollidingWith(go))
                     {
                         //a collision has happend
-<<<<<<< HEAD
                         OnCollision(go);
-=======
-
->>>>>>> Mandag10.30Morten
                     }
                 }
                 

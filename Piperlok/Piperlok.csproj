@@ -73,6 +73,7 @@
     <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="Interfaces\Ipower.cs" />
     <Compile Include="Keyboard.cs" />
+    <Compile Include="GameWorld.cs" />
     <Compile Include="LevelReader.cs" />
     <Compile Include="Milo_MacDonald.cs" />
     <Compile Include="Objects.cs" />
@@ -112,8 +113,6 @@
     <Content Include="Images\Actors\Piperlok.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_0.png" />
     <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_1.png" />
     <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_2.png" />
@@ -135,7 +134,6 @@
     <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_4.png" />
     <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_5.png" />
     <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_6.png" />
-<<<<<<< HEAD
     <Content Include="Sprites\Backgrounds\Background_0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -157,27 +155,6 @@
     <Content Include="Sprites\Backgrounds\Background_6.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sprites\Levels\Screen1.bmp">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Levels\Screen1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Levels\Screen2.bmp">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Levels\Screen2.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Levels\Screen3.bmp">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Levels\Screen3.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-=======
->>>>>>> parent of ea93a37... Level Generator
-=======
     <Content Include="Sprites\Backgrounds\Background_0.png" />
     <Content Include="Sprites\Backgrounds\Background_1.png" />
     <Content Include="Sprites\Backgrounds\Background_2.png" />
@@ -185,7 +162,15 @@
     <Content Include="Sprites\Backgrounds\Background_4.png" />
     <Content Include="Sprites\Backgrounds\Background_5.png" />
     <Content Include="Sprites\Backgrounds\Background_6.png" />
->>>>>>> Mandag10.30Morten
+    <Content Include="Sprites\Levels\Screen1.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Levels\Screen2.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Levels\Screen3.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Sprites\Piperlok animation\drink.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -205,21 +190,20 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sprites\Piperlok animation\walk_04.png">
-=======
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Piperlok animation\walk_05.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Piperlok animation\walk_06.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Piperlok animation\walk_07.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Sprites\Piperlok.png">
->>>>>>> parent of 867448d... Sprites updated
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sprites\PiperlokAnim\sprite_0.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\PiperlokAnim\sprite_1.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\PiperlokAnim\sprite_2.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-<<<<<<< HEAD
     <Content Include="Sprites\Background01.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -254,13 +238,6 @@
     <Content Include="Sprites\objekter\switchon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sprites\Piperlok.png">
-=======
-    <Content Include="Sprites\PiperlokAnim\sprite_3.png">
->>>>>>> parent of 867448d... Sprites updated
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\PiperlokAnim\sprite_0.png" />
     <Content Include="Sprites\Platforms\BaseBlock.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

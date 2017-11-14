@@ -36,47 +36,49 @@ namespace Piperlok
             {
                 for (int y = 0; y <= 14;)
                 {
-                    if (level1.GetPixel(x, y).A == 0)
+                    if (level1.GetPixel(x, y).ToArgb() == Color.FromArgb(0,0,0).ToArgb())
                     {
                         screen1[x, y] = 0;
                     }
-                    else if (level1.GetPixel(x,y) == Color.White)
+                    else if (level1.GetPixel(x, y).ToArgb() == Color.White.ToArgb())
                     {
                         screen1[x, y] = 1;
                     }
-                    else if (level1.GetPixel(x, y) == Color.FromArgb(127,121,121))
+                    else if (level1.GetPixel(x, y).ToArgb() == Color.FromArgb(127,121,121).ToArgb())
                     {
                         screen1[x, y] = 2;
                     }
-                    else if (level1.GetPixel(x, y) == Color.FromArgb(255,0,0))
+                    else if (level1.GetPixel(x, y).ToArgb() == Color.FromArgb(255,13,0).ToArgb())
                     {
                         screen1[x, y] = 3;
                     }
-                    /*else if (level1.GetPixel(x, y) == Color.FromArgb(123,0,0))
+                    else if (level1.GetPixel(x, y).ToArgb() == Color.FromArgb(123,0,0).ToArgb())
                     {
                         screen1[x, y] = 4;
-                    }*/
-                    else if (level1.GetPixel(x, y) == Color.FromArgb(0, 255, 19))
+                    }
+                    else if (level1.GetPixel(x, y).ToArgb() == Color.FromArgb(0, 255, 19).ToArgb())
                     {
                         screen1[x, y] = 5;
                     }
-                    /*else if (level1.GetPixel(x, y) == Color.FromArgb(5, 107, 20))
+                    else if (level1.GetPixel(x, y).ToArgb() == Color.FromArgb(5, 107, 20).ToArgb())
                     {
                         screen1[x, y] = 6;
-                    }*/
-                    else if (level1.GetPixel(x, y) == Color.FromArgb(145, 255, 153))
+                    }
+                    else if (level1.GetPixel(x, y).ToArgb() == Color.FromArgb(145, 255, 153).ToArgb())
                     {
                         screen1[x, y] = 7;
                     }
-                    /*else if (level1.GetPixel(x, y) == Color.FromArgb(0, 194, 255))
+                    else if (level1.GetPixel(x, y).ToArgb() == Color.FromArgb(0, 194, 255).ToArgb())
                     {
                         screen1[x, y] = 8;
                     }
-                    else if (level1.GetPixel(x, y) == Color.FromArgb(252, 255, 0))
+                    else if (level1.GetPixel(x, y).ToArgb() == Color.FromArgb(252, 255, 0).ToArgb())
                     {
                         screen1[x, y] = 9;
-                    }*/
+                    }
+                    y++;
                 }
+                x++;
             }
         }
         public void GenLevel2()

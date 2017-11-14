@@ -101,12 +101,11 @@ namespace Piperlok
 
         public override void OnCollision(Actors other)
         {
-<<<<<<< HEAD
-            if(other is Actors)
+            if (other is Actors)
             {
                 //We are colliding with an other actor
-=======
-            GameWorld.RomovedList.Add(other);
+                GameWorld.RomovedList.Add(other);
+            }
         }
         public override void OnCollision(Objects other)
         {
@@ -132,12 +131,7 @@ namespace Piperlok
 
                     }
                 }
-
->>>>>>> Mandag10.30Morten
             }
-
-
-
         }
     }
 }
