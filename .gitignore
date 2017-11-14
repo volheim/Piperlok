@@ -7,8 +7,6 @@
 *.user
 *.userosscache
 *.sln.docstates
-Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
-Piperlok\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache
 <<<<<<< HEAD
 
 =======
