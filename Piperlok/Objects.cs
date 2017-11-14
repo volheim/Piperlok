@@ -51,7 +51,8 @@ namespace Piperlok
 
         public void Draw(Graphics dc)
         {
-
+            dc.DrawImage(sprite, position.X, position.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
+            dc.DrawRectangle(new Pen(Brushes.Red), CollisionBox.X, CollisionBox.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
         }
 
         public virtual void OnCollision(Actors other)

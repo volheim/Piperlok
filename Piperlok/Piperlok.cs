@@ -10,37 +10,40 @@ namespace Piperlok
 {
     class Piperlok : Actors
     {
-
-        float jumpHeight = 100;
+        float jumpHeight = 30;
         float jumpHeightLeft;
         float jumpTime;
-
-
-        public RectangleF collisionBox;
+        private RectangleF collisionBox;
 
         //Refrence to Vector2D
         Vector2D position;
-
         //bool to ensure that Piperlok is grounded or not
         bool grounded = true;
-
+        public bool Grounded { get { return grounded; } set { grounded = value; } }
+        public RectangleF CollisionBox
+        {
+            get { return collisionBox; }
+            set { collisionBox = value; }
+        }
         //Piperlok's constructor
         public Piperlok(string imagePaths, float speed, int health, Vector2D startposition, float scaleFactor) : base(imagePaths, speed, startposition, scaleFactor)
         {
             name = "Piperlok";
             //skab en sprite og collision box til piperlok
+            collisionBox = new RectangleF(startposition.X, startposition.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
             position = startposition;
 
-            bool grounded = true;
-
+            bool grounded = false;
         }
 
         //Piperloks Update funktion
         public override void Update(float fps)
         {
             //Calls Gravity
-            Gravity();
-
+            if (!grounded)
+            {
+                Gravity();
+            }
             //Assigns different keys to Piperloks movement
             if (Keyboard.IsKeyDown(Keys.A))
             {
@@ -63,12 +66,6 @@ namespace Piperlok
         {
             grounded = false;
             jumpHeightLeft = jumpHeight;
-            Gravity();
-        }
-
-        public override void Collide()
-        {
-            base.Collide();
         }
 
         //bruges til at interagere med nogle objekter, starter minigames
@@ -89,19 +86,25 @@ namespace Piperlok
 
             //udregner hoppet som en fysisk bevægelse, hoppet bliver langsommere
             float netMove;
-            netMove = (jumpHeightLeft - gravityPull) * Form1.currentFps;
-            jumpHeightLeft =-gravityPull * Form1.currentFps;
+            netMove = (jumpHeightLeft - (gravityPull * Form1.currentFps / 50));
+            jumpHeightLeft = -gravityPull * (Form1.currentFps / 50);
 
             //sætter en terminal velocity
-            if(netMove < -2) { netMove = -2; }
-            position.Y += netMove * Form1.currentFps;
+            if (netMove < -2) { netMove = -1; }
+            position.Y -= netMove * (Form1.currentFps / 10);
 
-            
+
+
         }
-
+        public override void Draw(Graphics dc)
+        {
+            Font f = new Font("Arial", 16);
+            dc.DrawString(string.Format("JumpheightLeft: {0}", jumpHeightLeft), f, Brushes.Red, 100, 2);
+            base.Draw(dc);
+        }
         public override void OnCollision(Actors other)
         {
-            foreach(Piperlok go in GameWorld.actorList)
+            foreach (Piperlok go in GameWorld.actorList)
             {
                 //If the Actors we are checking isn't itself
                 //This prevents them from colliding with itself
@@ -112,13 +115,18 @@ namespace Piperlok
                 }
             }
         }
-
+         public void IsNotGrounded()
+        {
+            grounded = false;
+        }
         public override void OnCollision(Objects other)
         {
-            throw new NotImplementedException();
-            if(other.Position.Y > this.position.X)
-            {
                 grounded = true;
+                jumpHeightLeft = 0;
+                position.Y = other.CollisionBox.Top - collisionBox.Height;
+            if (grounded)
+            {
+                position.Y = other.CollisionBox.Top - collisionBox.Height;
             }
         }
     }

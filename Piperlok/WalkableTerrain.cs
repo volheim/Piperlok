@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Piperlok.GameObejcts
+namespace Piperlok
 {
     class WalkableTerrain : Objects
     {

@@ -31,11 +31,6 @@ namespace Piperlok
 
         }
 
-        public override void Collide()
-        {
-            base.Collide();
-        }
-
         public override void OnCollision(Actors other)
         {
             throw new NotImplementedException();

@@ -34,9 +34,13 @@ namespace Piperlok
             actorList = new List<Actors>();
             objList = new List<Objects>();
 
+
+            objList.Add(new WalkableTerrain(false, true, @"Images\Platforms\BaseBlock.png", new Vector2D(1.5f, 570f), "bb1", 1));
+            objList.Add(new WalkableTerrain(false, true, @"Images\Platforms\BaseBlock.png", new Vector2D(1.5f, 100f), "bb2", 1));
+            objList.Add(new WalkableTerrain(false, true, @"Images\Platforms\BaseBlock.png", new Vector2D(200f, 600f), "bb3", 1));
             actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(1.5f, 520f),2f));
             actorList.Add(new Camera(@"Enemy.png", 10, 100, new Vector2D(400f, 500f),0.1f));
-            objList.Add(new w)
+            
         }
 
         public List<Actors> ActorList
@@ -62,19 +66,18 @@ namespace Piperlok
 
         public void Draw()
         {
-            dc.Clear(Color.Black);
-            
+            dc.Clear(Color.Black);        
 #if DEBUG
             Font f = new Font("Arial", 16);
             dc.DrawString(string.Format("FPS : {0}", currentFps), f, Brushes.Red, 2,2);
-#endif 
-            foreach (Actors act in actorList)
-            {
-                act.Draw(dc);
-            }
+#endif
             foreach (Objects obj in objList)
             {
                 obj.Draw(dc);
+            }
+            foreach (Actors act in actorList)
+            {
+                act.Draw(dc);
             }
             backBuffer.Render();
         }

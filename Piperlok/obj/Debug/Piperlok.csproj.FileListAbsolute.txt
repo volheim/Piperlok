@@ -122,3 +122,4 @@ C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.GenerateR
 C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.CoreCompileInputs.cache
 C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.exe
 C:\Users\MIKZ\source\repos\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
+C:\Users\MIKZ\source\repos\Piperlok\Piperlok\bin\Debug\Images\Platforms\BaseBlock.png
