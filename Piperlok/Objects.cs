@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Piperlok
 {
-    class Objects
+    abstract class Objects
     {
         #region Fields
         //objektet kan flyttes af spilleren
@@ -16,22 +16,30 @@ namespace Piperlok
         protected string name;
         protected Vector2D position;
         protected Image sprite;
+        protected float scaleFactor;
         #endregion
-
-        public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name, int level)
+        #region Properties
+        public Vector2D Position
+        {
+            get { return position; }
+        }
+#endregion
+        public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name, float scalefactor)
         {
             this.moveable = moveable;
             this.collideable = collideable;
             sprite = Image.FromFile(imagePath);
             this.position = position;
             this.name = name;
+            this.scaleFactor = scalefactor;
+
         }
         //Property for returning a collision rectangle with the correct size and position
         public RectangleF CollisionBox
         {
             get
             {
-                return new RectangleF(position.X, position.Y, sprite.Width, /** scaleFactor,*/ sprite.Height /** scaleFactor*/);
+                return new RectangleF(position.X, position.Y, sprite.Width, sprite.Height);
             }
         }
 
@@ -43,14 +51,15 @@ namespace Piperlok
 
         public void Draw(Graphics dc)
         {
-
+            dc.DrawImage(sprite, position.X, position.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
+            dc.DrawRectangle(new Pen(Brushes.Red), CollisionBox.X, CollisionBox.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
         }
 
         public virtual void OnCollision(Actors other)
         {
             if (other is Actors)
             {
-                //We are colliding with an other actor
+               
             }
         }
     }

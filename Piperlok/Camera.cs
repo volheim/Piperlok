@@ -14,7 +14,7 @@ namespace Piperlok
         //et skud fra kameraet
         Object bullet;
 
-        public Camera(string imagePaths, float speed, int health, Vector2D startPosition) : base(speed, imagePaths, startPosition)
+        public Camera(string imagePaths, float speed, int health, Vector2D startPosition,float scaleFactor) : base(imagePaths,speed, startPosition,scaleFactor)
         {
 
         }
@@ -29,11 +29,6 @@ namespace Piperlok
         void SpotPiperlok()
         {
 
-        }
-
-        public override void Collide()
-        {
-            base.Collide();
         }
 
         public override void OnCollision(Actors other)

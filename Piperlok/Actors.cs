@@ -14,8 +14,10 @@ namespace Piperlok
         public float speed;
         public int health;
         public string name;
-        
+        public float scaleFactor;
+        private List<DeathList> deathlist = new List<DeathList>();
 
+        GameWorld GW;
         Vector2D position;
 
         public Image sprite;
@@ -36,9 +38,9 @@ namespace Piperlok
             //Runs all GameObject's gamelogic
             CheckCollision();
         }
-        
+
         //Actors constructor
-        public Actors(float speed, string imagePath, Vector2D startposition)
+        public Actors(string imagePath, float speed, Vector2D startposition, float scaleFactor)
         {
             animationSpeed = 5;
 
@@ -59,23 +61,18 @@ namespace Piperlok
 
             //Selects a default sprite
             this.sprite = this.animationFrames[0];
-        }
-
-        public virtual void Collide()
-        {
-
+            this.gravityPull = 2f;
+            this.scaleFactor = scaleFactor;
         }
 
         public virtual void Gravity()
         {
-            
-            
         }
 
-        public void Draw(Graphics dc)
+        public virtual void Draw(Graphics dc)
         {
-            dc.DrawImage(sprite, position.X, position.Y, sprite.Width, sprite.Height);
-            dc.DrawRectangle(new Pen(Brushes.Red), CollisionBox.X, CollisionBox.Y, CollisionBox.Width, CollisionBox.Height);
+            dc.DrawImage(sprite, position.X, position.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
+            dc.DrawRectangle(new Pen(Brushes.Red), CollisionBox.X, CollisionBox.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
         }
 
         //Updates the animation
@@ -103,8 +100,9 @@ namespace Piperlok
         {
             get
             {
-                return new RectangleF(position.X, position.Y, sprite.Width /* scaleFactor*/, sprite.Height /** scaleFactor*/);
+                return new RectangleF(position.X, position.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
             }
+            set { CollisionBox = value;}
         }
 
         //Returns true, if the GameObject is colliding with the other GameObject
@@ -122,7 +120,7 @@ namespace Piperlok
         public abstract void OnCollision(Actors other);
         public abstract void OnCollision(Objects other);
 
-        private void CheckCollision()
+        protected virtual void CheckCollision()
         {
             //Runs through all objects in the GameWorld
             foreach (Actors go in GameWorld.actorList)
@@ -139,19 +137,26 @@ namespace Piperlok
                         OnCollision(go);
                     }
                 }
-                
+
             }
+            int gravityProc = 0;
             foreach (Objects go in GameWorld.objList)
             {
-              
-                    if (this.IsCollidingWith(go))
-                    {
-                        OnCollision(go);
-                    }
-                
-                
-            }
-        }
 
+                if (this.IsCollidingWith(go))
+                {
+                    OnCollision(go);
+                    gravityProc++;
+                }
+            }
+            if (this is Piperlok)
+            {
+                if (gravityProc <= 0)
+                {
+                    
+                }
+            }
+ 
+        }
     }
 }

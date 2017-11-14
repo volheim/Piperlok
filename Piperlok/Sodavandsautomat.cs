@@ -11,7 +11,7 @@ namespace Piperlok
         public bool active;
         Vector2D position;
 
-        public Sodavandsautomat(Vector2D startposition, string imagePath, string name, int level) :base (false,false, imagePath,startposition, name, level)
+        public Sodavandsautomat(Vector2D startposition, string imagePath, string name, float scaleFactor) :base (false,false, imagePath,startposition, name, scaleFactor)
         {
             position = startposition;
         }
