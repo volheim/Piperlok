@@ -9,29 +9,22 @@ namespace Piperlok
 {
     abstract class Actors
     {
+#region Fields
         //Indicates that an actor is alive. Cameras who is not alive, stops working. Techzomies is not dangerous anymore and Piperlok and Milo is dying.
         public bool alive;
-        public float speed;
-        public int health;
+        protected float speed;
+        protected int health;
         public string name;
         public float scaleFactor;
-        private List<DeathList> deathlist = new List<DeathList>();
-
-        GameWorld GW;
         Vector2D position;
-
         public Image sprite;
-
         public float gravityPull;
-
         float animationSpeed;
-
         //List of all frames in the animation
         protected List<Image> animationFrames;
-
         //Index used for running through the animations
         protected float currentFrameIndex = 5;
-
+#endregion
 
         public virtual void Update(float fps)
         {
@@ -115,7 +108,8 @@ namespace Piperlok
         {
             return CollisionBox.IntersectsWith(other.CollisionBox);
         }
-
+        public virtual void IsnotGrounded() {
+        }
         //This method is called whenever a collision happens
         public abstract void OnCollision(Actors other);
         public abstract void OnCollision(Objects other);
@@ -153,7 +147,7 @@ namespace Piperlok
             {
                 if (gravityProc <= 0)
                 {
-                    
+                    IsnotGrounded();
                 }
             }
  

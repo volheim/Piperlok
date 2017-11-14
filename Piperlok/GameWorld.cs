@@ -38,9 +38,10 @@ namespace Piperlok
             objList.Add(new WalkableTerrain(false, true, @"Images\Platforms\BaseBlock.png", new Vector2D(1.5f, 570f), "bb1", 1));
             objList.Add(new WalkableTerrain(false, true, @"Images\Platforms\BaseBlock.png", new Vector2D(1.5f, 100f), "bb2", 1));
             objList.Add(new WalkableTerrain(false, true, @"Images\Platforms\BaseBlock.png", new Vector2D(200f, 600f), "bb3", 1));
-            actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(1.5f, 520f),2f));
-            actorList.Add(new Camera(@"Enemy.png", 10, 100, new Vector2D(400f, 500f),0.1f));
-            
+            objList.Add(new WalkableTerrain(false, true, @"Images\Platforms\BaseBlock.png", new Vector2D(350f, 600f), "bb3", 1));
+            objList.Add(new WalkableTerrain(false, true, @"Images\Platforms\BaseBlock.png", new Vector2D(300f, 450f), "bb3", 1));
+            actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(3f, 400f),2f));
+
         }
 
         public List<Actors> ActorList
