@@ -124,7 +124,9 @@ namespace Piperlok
         }
         public override void OnCollision(Objects other)
         {
-
+            ///<summary>
+            ///piperlok overide funktion til onCollision. den omhandler primært clipping og tyngdekraft så piperlok ikke falder igemmem objekter
+            /// </summary>
 
             if (this.CollisionBox.Bottom + 2 >= other.CollisionBox.Top && this.CollisionBox.Bottom <= other.CollisionBox.Top + 20 && !grounded)
             {
@@ -134,26 +136,15 @@ namespace Piperlok
                 position.Y = other.CollisionBox.Top - CollisionBox.Height;
 
             }
-
-            else if (CollisionBox.Right >= other.CollisionBox.Left && CollisionBox.Right <= other.CollisionBox.Left + 10 && !grounded)
-            {
-                position.X = other.CollisionBox.Left - CollisionBox.Width;
-            }
-            else if (CollisionBox.Left >= other.CollisionBox.Right && CollisionBox.Left <= other.CollisionBox.Right - 10 && !grounded)
-            {
-                position.X = other.CollisionBox.Right;
-            }
-
-            //Grounded
             if (grounded && position.Y + sprite.Height < other.CollisionBox.Top)
             {
                 position.Y = other.CollisionBox.Top - CollisionBox.Height;
             }
-            else if (CollisionBox.Right >= other.CollisionBox.Left && grounded)
+            else if (CollisionBox.Right >= other.CollisionBox.Left && CollisionBox.Right <= other.CollisionBox.Left + 10)
             {
                 position.X = other.CollisionBox.Left - CollisionBox.Width;
             }
-            else if (CollisionBox.Left <= other.CollisionBox.Right && grounded)
+            else  if (CollisionBox.Left >= other.CollisionBox.Right -10 && CollisionBox.Left <= other.CollisionBox.Right)
             {
                 position.X = other.CollisionBox.Right;
             }
