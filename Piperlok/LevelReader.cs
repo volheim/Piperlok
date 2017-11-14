@@ -17,8 +17,6 @@ namespace Piperlok
         public int[,] screen2 = new int[20, 15];
         public int[,] screen3 = new int[20, 15];
 
-
-
         /*in levelgen read the bitmaps and save what is where
          * 1 = block
          * 2 = door
@@ -29,7 +27,8 @@ namespace Piperlok
          * 7 = switch
          * 8 = beer
          * 9 = power box
-        */
+         */
+
         public void GenLevel1()
         {
             for (int x = 0; x <= 19; )
@@ -177,6 +176,5 @@ namespace Piperlok
                 }
             }
         }
-
     }
 }
