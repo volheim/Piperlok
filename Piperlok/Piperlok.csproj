@@ -76,6 +76,7 @@
     <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="Interfaces\Ipower.cs" />
     <Compile Include="Keyboard.cs" />
+    <Compile Include="LevelReader.cs" />
     <Compile Include="Lever.cs" />
     <Compile Include="Milo_MacDonald.cs" />
     <Compile Include="Objects.cs" />
@@ -116,6 +117,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Actors\Piperlok.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Levels\Screen1.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Levels\Screen2.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Levels\Screen3.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_0.png" />

@@ -14,9 +14,12 @@ namespace Piperlok
         //et skud fra kameraet
         Object bullet;
 
-        public Camera(string imagePaths, float speed, int health, Vector2D startPosition,float scaleFactor) : base(imagePaths,speed, startPosition,scaleFactor)
-        {
+        Vector2D position;
 
+        public Camera(string imagePaths, float speed, int health, Vector2D startPosition,float scaleFactor, string name) : base(imagePaths,speed, startPosition,scaleFactor, name)
+        {
+            position = startPosition;
+            position.Y = startPosition.Y - (this.sprite.Height * scaleFactor);
         }
 
         public override void Update(float fps)

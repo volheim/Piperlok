@@ -29,22 +29,21 @@ namespace Piperlok
 
         void SetupWorld()
         {
-            lr.GenLevel2();
-            GenerateLevel();
+
             endTime = DateTime.Now;
             actorList = new List<Actors>();
             objList = new List<Objects>();
-<<<<<<< HEAD
+
             romovedList = new List<Objects>();
 
-            actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(1.5f, 580f),3f, "Player"));
-            actorList.Add(new Camera(@"Sprites\objekter\cameraMrød.png", 10, 100, new Vector2D(500f, 380f),0.3f));
+            //actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(1.5f, 580f),3f, "Player"));
+            //actorList.Add(new Camera(@"Sprites\objekter\cameraMrød.png", 10, 100, new Vector2D(500f, 380f),0.3f, "cam"));
 
-            objList.Add(new ElefantØl(1, new Vector2D(200f, 600f), @"Sprites\objekter\elefantøl.png", "Beer", 0.08f, true));
-            objList.Add(new Sodavandsautomat(new Vector2D(700f, 400f), @"Sprites\objekter\g4968.png", "SodaMachine", 0.2f, false));
-            objList.Add(new Lever(new Vector2D(350f, 500f), @"Sprites\Objekter\switchoff.png", "LeverOFF", 0.2f, false));
-            objList.Add(new)
-=======
+            //objList.Add(new ElefantØl(1, new Vector2D(200f, 600f), @"Sprites\objekter\elefantøl.png", "Beer", 0.08f, true));
+            //objList.Add(new Sodavandsautomat(new Vector2D(700f, 400f), @"Sprites\objekter\g4968.png", "SodaMachine", 0.2f, false));
+            //objList.Add(new Lever(new Vector2D(350f, 500f), @"Sprites\Objekter\switchoff.png", "LeverOFF", 0.2f, false));
+            //objList.Add(new)
+
             powerupList = new List<PowerUps>();
 
             //actorList.Add(new Piperlok(@"Sprites\Piperlok.png", 15, 3, new Vector2D(1.5f, 3.0f)));
@@ -52,11 +51,9 @@ namespace Piperlok
             //powerupList.Add(new Cola(new Vector2D(1.5f, 10f), @"Sprites\Cola.png"));
             //objList.Add(new Computer(new Vector2D(1.5f, 20f), @"Sprites\computer.png"));
             //objList.Add(new Sodavandsautomat(new Vector2D(1.5f, 30f), @"Sprites\rocket.png"));
-        
-            romovedList = new List<Actors>();
 
-            actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(1.5f, 520f)));
-            //actorList.Add(new Camera(@"Sprites\objekter\cameraMrød.png", 10, 100, new Vector2D(400f, 500f)));
+            lr.GenLevel2();
+            GenerateLevel();
 
         }
 
@@ -82,12 +79,12 @@ namespace Piperlok
                     else if (level1[x, y] == 3)
                     {
                         //tech zombie
-                        actorList.Add(new TechZombie(@"Sprites\objekter\camerastang.png", 1, 1, new Vector2D(x, y)));
+                        actorList.Add(new TechZombie(@"enemy.png", 1, 1, new Vector2D(x * 60, y * 60), 0.3f, "zomb"));
                     }
                     else if (level1[x, y] == 4)
                     {
                         //camera
-                        actorList.Add(new Camera(@"Sprites\objekter\cameraMrød.png", 0, 1, new Vector2D(x, y)));
+                        actorList.Add(new Camera(@"Sprites\objekter\cameraMrød.png", 10, 100, new Vector2D((x * 60), y * 60), 0.3f, "cam"));
                     }
                     else if (level1[x, y] == 5)
                     {
@@ -97,27 +94,27 @@ namespace Piperlok
                     else if (level1[x, y] == 6)
                     {
                         //computer
-                        objList.Add(new Computer(new Vector2D(x * 60, y * 60), @"Sprites\objekter\computer.png", "computer"));
+                        objList.Add(new Computer(new Vector2D(x * 60, y * 60), @"Sprites\objekter\computer.png", "computer", 0.3f, false));
                     }
                     else if (level1[x, y] == 7)
                     {
                         //switch
-
+                        objList.Add(new Lever(new Vector2D(x * 60, y * 60), @"Sprites\Objekter\switchoff.png", "LeverOFF", 0.2f, false));
                     }
                     else if (level1[x, y] == 8)
                     {
                         //beer
-                        objList.Add(new ElefantØl(1, new Vector2D(x * 60, y * 60), @"Sprites\objekter\elefantøl.png", "beer"));
+                        objList.Add(new ElefantØl(1, new Vector2D(x * 60, y * 60), @"Sprites\objekter\elefantøl.png", "Beer", 0.08f, true));
                     }
                     else if (level1[x, y] == 9)
                     {
                         //power box
                     }
-                    y++;
+                    y+=1;
                 }
-                x++;
+                x+=1;
             }
->>>>>>> Levelgen
+
         }
 
         public static List<Actors> ActorList

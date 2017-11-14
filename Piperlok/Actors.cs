@@ -63,6 +63,7 @@ namespace Piperlok
             this.sprite = this.animationFrames[0];
 
             this.scaleFactor = scaleFactor;
+
         }
 
         public virtual void Collide()

@@ -20,7 +20,7 @@ namespace Piperlok
         {
             position = startposition;
             destroyable = true;
-            
+            position.Y = startposition.Y - (this.sprite.Height * scaleFactor);
         }
 
         public override void OnCollision(Actors other)

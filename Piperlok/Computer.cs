@@ -8,12 +8,14 @@ namespace Piperlok
 {
     class Computer : Objects
     {
+
         public bool active;
         Vector2D position;
 
         public Computer(Vector2D startposition, string imagePath,string name, float scaleFactor, bool destroyable) : base(false, false, imagePath, startposition, name, scaleFactor, destroyable)
         {
             position = startposition;
+            position.Y = startposition.Y - (this.sprite.Height * scaleFactor);
         }
 
         

@@ -76,9 +76,9 @@ namespace Piperlok
                     {
                         screen1[x, y] = 9;
                     }
-                    y++;
+                    y+=1;
                 }
-                x++;
+                x+=1;
             }
         }
         public void GenLevel2()

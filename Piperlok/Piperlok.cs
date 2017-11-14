@@ -30,6 +30,7 @@ namespace Piperlok
             name = "Piperlok";
             //skab en sprite og collision box til piperlok
             position = startposition;
+            position.Y = startposition.Y - (this.sprite.Height * scaleFactor);
 
             bool grounded = true;
 
