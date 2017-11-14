@@ -29,14 +29,14 @@ namespace Piperlok
 
         void SetupWorld()
         {
-            lr.GenLevel1();
+            lr.GenLevel2();
             GenerateLevel();
             endTime = DateTime.Now;
             actorList = new List<Actors>();
             objList = new List<Objects>();
             powerupList = new List<PowerUps>();
 
-            actorList.Add(new Piperlok(@"Sprites\Piperlok.png", 15, 3, new Vector2D(1.5f, 3.0f)));
+            //actorList.Add(new Piperlok(@"Sprites\Piperlok.png", 15, 3, new Vector2D(1.5f, 3.0f)));
             //powerupList.Add(new ElefantØl(1,new Vector2D(1.5f, 5f),@"Sprites\elefantøl.png","Beers"));
             //powerupList.Add(new Cola(new Vector2D(1.5f, 10f), @"Sprites\Cola.png"));
             //objList.Add(new Computer(new Vector2D(1.5f, 20f), @"Sprites\computer.png"));
@@ -45,7 +45,7 @@ namespace Piperlok
             romovedList = new List<Actors>();
 
             actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(1.5f, 520f)));
-            actorList.Add(new Camera(@"Sprites\objekter\cameraMrød.png", 10, 100, new Vector2D(400f, 500f)));
+            //actorList.Add(new Camera(@"Sprites\objekter\cameraMrød.png", 10, 100, new Vector2D(400f, 500f)));
 
         }
 
@@ -55,10 +55,9 @@ namespace Piperlok
             {
                 for (int y = 0; y <= 14;)
                 {
-                    level1[x, y] = lr.screen1[x, y];
+                    level1[x, y] = lr.screen2[x, y];
                     if (level1[x, y] == 0)
                     {
-
                         //empty
                     }
                     else if (level1[x, y] == 1)
@@ -72,12 +71,12 @@ namespace Piperlok
                     else if (level1[x, y] == 3)
                     {
                         //tech zombie
-                        actorList.Add(new TechZombie(@"Sprites\objekter\camerastang.png", 1, 1, new Vector2D(x * 60, y * 60)));
+                        actorList.Add(new TechZombie(@"Sprites\objekter\camerastang.png", 1, 1, new Vector2D(x, y)));
                     }
                     else if (level1[x, y] == 4)
                     {
                         //camera
-                        actorList.Add(new Camera(@"Sprites\objekter\cameraMrød.png", 0, 1, new Vector2D(x * 60, y * 60)));
+                        actorList.Add(new Camera(@"Sprites\objekter\cameraMrød.png", 0, 1, new Vector2D(x, y)));
                     }
                     else if (level1[x, y] == 5)
                     {

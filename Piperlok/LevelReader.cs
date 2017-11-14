@@ -83,9 +83,9 @@ namespace Piperlok
         }
         public void GenLevel2()
         {
-            foreach (int x in screen2)
+            for (int x = 0; x <= 19;)
             {
-                foreach (int y in screen2)
+                for (int y = 0; y <= 14;)
                 {
                     if (level2.GetPixel(x, y).A == 0)
                     {
@@ -99,7 +99,7 @@ namespace Piperlok
                     {
                         screen2[x, y] = 2;
                     }
-                    else if (level2.GetPixel(x, y) == Color.FromArgb(255, 0, 0))
+                    else if (level2.GetPixel(x, y) == Color.FromArgb(255, 13, 0))
                     {
                         screen2[x, y] = 3;
                     }
@@ -111,30 +111,32 @@ namespace Piperlok
                     {
                         screen2[x, y] = 5;
                     }
-                    /*else if (level2.GetPixel(x, y) == Color.FromArgb(5, 107, 20))
+                    else if (level2.GetPixel(x, y) == Color.FromArgb(5, 107, 20))
                     {
                         screen2[x, y] = 6;
                     }
                     else if (level2.GetPixel(x, y) == Color.FromArgb(145, 255, 153))
                     {
                         screen2[x, y] = 7;
-                    }*/
+                    }
                     else if (level2.GetPixel(x, y) == Color.FromArgb(0, 194, 255))
                     {
                         screen2[x, y] = 8;
                     }
-                    /*else if (level2.GetPixel(x, y) == Color.FromArgb(252, 255, 0))
+                    else if (level2.GetPixel(x, y) == Color.FromArgb(252, 255, 0))
                     {
                         screen2[x, y] = 9;
-                    }*/
+                    }
+                    y++;
                 }
+                x++;
             }
         }
         public void GenLevel3()
         {
-            foreach (int x in screen3)
+            for (int x = 0; x <= 19;)
             {
-                foreach (int y in screen3)
+                for (int y = 0; y <= 14;)
                 {
                     if (level3.GetPixel(x, y).A == 0)
                     {
@@ -176,7 +178,9 @@ namespace Piperlok
                     {
                         screen3[x, y] = 9;
                     }
+                    y++;
                 }
+                x++;
             }
         }
 
