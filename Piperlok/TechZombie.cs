@@ -46,7 +46,7 @@ namespace Piperlok
 
         public override void OnCollision(Objects other)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }

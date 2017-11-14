@@ -52,7 +52,9 @@ namespace Piperlok
             //objList.Add(new Computer(new Vector2D(1.5f, 20f), @"Sprites\computer.png"));
             //objList.Add(new Sodavandsautomat(new Vector2D(1.5f, 30f), @"Sprites\rocket.png"));
 
+            lr.GenLevel1();
             lr.GenLevel2();
+            lr.GenLevel3();
             GenerateLevel();
 
         }
@@ -63,7 +65,7 @@ namespace Piperlok
             {
                 for (int y = 0; y <= 14;)
                 {
-                    level1[x, y] = lr.screen2[x, y];
+                    level1[x, y] = lr.screen3[x, y];
                     if (level1[x, y] == 0)
                     {
                         //empty
@@ -71,6 +73,7 @@ namespace Piperlok
                     else if (level1[x, y] == 1)
                     {
                         //block
+                        objList.Add(new Block(false, true, @"Sprites\Platforms\BaseBlock.png", new Vector2D(x * 60, y * 60), "Block", 1, false));
                     }
                     else if (level1[x, y] == 2)
                     {
