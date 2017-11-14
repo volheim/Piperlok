@@ -82,7 +82,7 @@ namespace Piperlok
                     else if (level1[x, y] == 3)
                     {
                         //tech zombie
-                        actorList.Add(new TechZombie(@"enemy.png", 1, 1, new Vector2D(x * 60, y * 60), 0.3f, "zomb"));
+                        actorList.Add(new TechZombie(@"Sprites\ZombieAnim\zombie_00.png", 1, 1, new Vector2D(x * 60, y * 60), 5f, "zomb"));
                     }
                     else if (level1[x, y] == 4)
                     {

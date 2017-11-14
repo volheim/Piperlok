@@ -104,7 +104,6 @@ C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.csproj.Core
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.exe
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\obj\Debug\Piperlok.pdb
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Enemy.png
-C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Images\Actors\Piperlok.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\drink.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\stand.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_00.png
@@ -115,8 +114,6 @@ C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok ani
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_05.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_06.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok animation\walk_07.png
-C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Background01.png
-C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Background02.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\cameraMrød.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\camerastang.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\cameraUrød.png
@@ -126,7 +123,6 @@ C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\g49
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\rocket.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\switchoff.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\objekter\switchon.png
-C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Piperlok.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlock.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockB.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Platforms\BaseBlockBL.png
@@ -155,3 +151,12 @@ C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\Background_4.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\Background_5.png
 C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Backgrounds\Background_6.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\ZombieAnim\zombie_00.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\ZombieAnim\zombie_01.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\ZombieAnim\zombie_02.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\ZombieAnim\zombie_03.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\ZombieAnim\zombie_04.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\ZombieAnim\zombie_05.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\ZombieAnim\zombie_06.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\ZombieAnim\zombie_07.png
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\ZombieAnim\zombie_08.png
