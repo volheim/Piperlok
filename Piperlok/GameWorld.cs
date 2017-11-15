@@ -36,6 +36,8 @@ namespace Piperlok
             this.dc = backBuffer.Graphics;
             SetupWorld();
         }
+
+
         void SetupWorld()
         {
 
@@ -201,6 +203,8 @@ namespace Piperlok
             {
                 act.Draw(dc);
             }
+
+            backBuffer.Render();
 
         }
 
