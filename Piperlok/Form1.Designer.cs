@@ -35,26 +35,17 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 20;
+            this.timer1.Interval = 40;
             this.timer1.Tick += new System.EventHandler(this.Tick1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1201, 901);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.TopMost = true;
-=======
             this.ClientSize = new System.Drawing.Size(982, 953);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
->>>>>>> origin/Jump
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

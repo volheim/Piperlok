@@ -121,11 +121,7 @@ namespace Piperlok
         public abstract void OnCollision(Actors other);
         public abstract void OnCollision(Objects other);
 
-<<<<<<< HEAD
-        public virtual void CheckCollision()
-=======
         protected virtual void CheckCollision()
->>>>>>> origin/Jump
         {
             //Runs through all objects in the GameWorld
             foreach (Actors go in GameWorld.ActorList)

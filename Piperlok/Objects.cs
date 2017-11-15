@@ -19,18 +19,9 @@ namespace Piperlok
         protected float scaleFactor;
         public bool destroyable;
         #endregion
-<<<<<<< HEAD
+        #region Properties
 
         public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name, float scalefactor, bool destroyable)
-=======
-        #region Properties
-        public Vector2D Position
-        {
-            get { return position; }
-        }
-#endregion
-        public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name, float scalefactor)
->>>>>>> origin/Jump
         {
             this.moveable = moveable;
             this.collideable = collideable;
@@ -40,6 +31,15 @@ namespace Piperlok
             this.scaleFactor = scalefactor;
 
         }
+        public Vector2D Position
+        {
+            get { return position; }
+        }
+
+
+        #endregion
+
+
         //Property for returning a collision rectangle with the correct size and position
         public RectangleF CollisionBox
         {

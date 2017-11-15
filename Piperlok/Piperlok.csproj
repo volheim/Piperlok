@@ -59,12 +59,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FPowerUps\Cola.cs" />
     <Compile Include="FPowerUps\ElefantØl.cs" />
     <Compile Include="FPowerUps\PowerUps.cs" />
     <Compile Include="GameObejcts\Box.cs" />
     <Compile Include="GameObejcts\ColaMachine.cs" />
-    <Compile Include="GameObejcts\Objects.cs" />
     <Compile Include="GameObejcts\PowerBox.cs" />
     <Compile Include="GameObejcts\PowerPlate.cs" />
     <Compile Include="GameObejcts\PowerSwitch.cs" />
@@ -88,6 +86,7 @@
     <Compile Include="Sodavandsautomat.cs" />
     <Compile Include="TechZombie.cs" />
     <Compile Include="Vector2D.cs" />
+    <Compile Include="WalkableTerrain.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

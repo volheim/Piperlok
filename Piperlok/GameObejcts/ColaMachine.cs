@@ -12,13 +12,13 @@ namespace Piperlok.GameObejcts
     class ColaMachine : Objects , Ipower
     {
         private int ColasSpawned;
-        public ColaMachine(bool moveable, bool power, bool dangerous, Graphics sprite, PointF position, string name, float weight) : base(moveable, power, dangerous, sprite, position, name, weight)
+        public ColaMachine(bool moveable, bool collideable, string imagePath, bool power, Vector2D position, float scalefactor, bool dangerous, string name, bool destroyable) : base(false, false, imagePath, position, name, scalefactor, false)
         {
         }
 
         public void PowerOn()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
         public void SpawnCola()
         {

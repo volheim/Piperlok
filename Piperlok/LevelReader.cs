@@ -9,9 +9,9 @@ namespace Piperlok
 {
     public class LevelReader
     {
-        Bitmap level1 = new Bitmap(@"Sprites\Levels\Screen1.bmp");
-        Bitmap level2 = new Bitmap(@"Sprites\Levels\Screen2.bmp");
-        Bitmap level3 = new Bitmap(@"Sprites\Levels\Screen3.bmp");
+        Bitmap level1 = new Bitmap(@"Levels\Screen1.bmp");
+        Bitmap level2 = new Bitmap(@"Levels\Screen2.bmp");
+        Bitmap level3 = new Bitmap(@"Levels\Screen3.bmp");
 
         public int[,] screen1 = new int[20, 15];
         public int[,] screen2 = new int[20, 15];

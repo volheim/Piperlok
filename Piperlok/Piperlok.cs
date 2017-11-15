@@ -10,12 +10,8 @@ namespace Piperlok
 {
     class Piperlok : Actors
     {
-<<<<<<< HEAD
 
-        float jumpHeight;
-=======
         float jumpHeight = 30;
->>>>>>> origin/Jump
         float jumpHeightLeft;
         float jumpTime;
         private RectangleF collisionBox;
@@ -39,7 +35,7 @@ namespace Piperlok
             position = startposition;
             position.Y = startposition.Y - (this.sprite.Height * scaleFactor);
 
-            bool grounded = false;
+            grounded = false;
         }
 
         //Piperloks Update funktion
@@ -93,8 +89,8 @@ namespace Piperlok
 
             //udregner hoppet som en fysisk bevægelse, hoppet bliver langsommere
             float netMove;
-<<<<<<< HEAD
-            netMove = (jumpHeightLeft - gravityPull) * Form1.currentFps;
+
+            /*netMove = (jumpHeightLeft - gravityPull) * Form1.currentFps;
             jumpHeightLeft = -gravityPull * Form1.currentFps;
 
             //sætter en terminal velocity
@@ -102,16 +98,14 @@ namespace Piperlok
             position.Y += netMove * Form1.currentFps;
 
 
-        }
-=======
+        }*/
+
             netMove = (jumpHeightLeft - (gravityPull * Form1.currentFps / 10));
             jumpHeightLeft = -gravityPull * (Form1.currentFps / 10);
 
             //sætter en terminal velocity
             if (netMove < -2) { netMove = -2; }
             position.Y -= netMove * (Form1.currentFps / 10);
-
->>>>>>> origin/Jump
 
 
         }
@@ -121,28 +115,17 @@ namespace Piperlok
             dc.DrawString(string.Format("JumpheightLeft: {0}", jumpHeightLeft), f, Brushes.Red, 100, 2);
             base.Draw(dc);
         }
+
         public override void OnCollision(Actors other)
         {
-<<<<<<< HEAD
-            
-        }
-        public override void OnCollision(Objects other)
-        {
-            if(other is PowerUps && health < 3)
-            {
-                GameWorld.RomovedList.Add(other);
-                health++;
 
-            }
         }
 
-        public override void CheckCollision()
+        protected override void CheckCollision()
         {
+
             //Runs through all objects in the GameWorld
             foreach (Objects go in GameWorld.objList)
-=======
-            foreach (Piperlok go in GameWorld.actorList)
->>>>>>> origin/Jump
             {
                 //If the Actors we are checking isn't itself
                 //This prevents them from colliding with itself
@@ -150,7 +133,6 @@ namespace Piperlok
                 //{
                     //If this object is colliding with the other object
                     //Then we have a collision
-<<<<<<< HEAD
                     if (this.IsCollidingWith(go))
                     {
                         //a collision has happend
@@ -159,10 +141,7 @@ namespace Piperlok
                 //}
             }
         }
-=======
-                }
-            }
-        }
+          
          public void IsNotGrounded()
         {
             grounded = false;
@@ -180,7 +159,13 @@ namespace Piperlok
             {
                 position.Y = other.CollisionBox.Top - collisionBox.Height;
             }
+
+            if (other is PowerUps && health < 3)
+            {
+                GameWorld.RomovedList.Add(other);
+                health++;
+
+            }
         }
->>>>>>> origin/Jump
     }
 }

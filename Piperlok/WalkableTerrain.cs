@@ -21,7 +21,7 @@ namespace Piperlok
         }
 
         #endregion
-        public WalkableTerrain(bool moveable, bool collideable, string imagePath, Vector2D position, string name, float scalefactor) : base(moveable, collideable, imagePath, position, name, scalefactor)
+        public WalkableTerrain(bool moveable, bool collideable, string imagePath, Vector2D position, string name, float scalefactor) : base(false, collideable, imagePath, position, name, scalefactor, false)
         {
             this.position = position;
             this.name = name;
