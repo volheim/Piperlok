@@ -22,14 +22,7 @@ namespace Piperlok
         public override void Update(float fps)
         {
 
-        }
-
-       
-
-        public override void Collide()
-        {
-            base.Collide();
-        }
+        }  
 
         public override void Gravity()
         {

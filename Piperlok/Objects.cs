@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Piperlok
 {
-    class Objects
+    abstract class Objects
     {
         #region Fields
         //objektet kan flyttes af spilleren
@@ -19,8 +19,18 @@ namespace Piperlok
         protected float scaleFactor;
         public bool destroyable;
         #endregion
+<<<<<<< HEAD
 
         public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name, float scalefactor, bool destroyable)
+=======
+        #region Properties
+        public Vector2D Position
+        {
+            get { return position; }
+        }
+#endregion
+        public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name, float scalefactor)
+>>>>>>> origin/Jump
         {
             this.moveable = moveable;
             this.collideable = collideable;

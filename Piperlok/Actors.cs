@@ -61,26 +61,19 @@ namespace Piperlok
 
             //Selects a default sprite
             this.sprite = this.animationFrames[0];
-
+            this.gravityPull = 2f;
             this.scaleFactor = scaleFactor;
-
-        }
-
-        public virtual void Collide()
-        {
 
         }
 
         public virtual void Gravity()
         {
-            
-            
         }
 
-        public void Draw(Graphics dc)
+        public virtual void Draw(Graphics dc)
         {
-            dc.DrawImage(sprite, position.X, position.Y, sprite.Width*scaleFactor, sprite.Height*scaleFactor);
-            dc.DrawRectangle(new Pen(Brushes.Red), CollisionBox.X, CollisionBox.Y, sprite.Width*scaleFactor, sprite.Height*scaleFactor);
+            dc.DrawImage(sprite, position.X, position.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
+            dc.DrawRectangle(new Pen(Brushes.Red), CollisionBox.X, CollisionBox.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
         }
 
         //Updates the animation
@@ -110,6 +103,7 @@ namespace Piperlok
             {
                 return new RectangleF(position.X, position.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
             }
+            set { CollisionBox = value;}
         }
 
         //Returns true, if the GameObject is colliding with the other GameObject
@@ -127,7 +121,11 @@ namespace Piperlok
         public abstract void OnCollision(Actors other);
         public abstract void OnCollision(Objects other);
 
+<<<<<<< HEAD
         public virtual void CheckCollision()
+=======
+        protected virtual void CheckCollision()
+>>>>>>> origin/Jump
         {
             //Runs through all objects in the GameWorld
             foreach (Actors go in GameWorld.ActorList)
@@ -144,19 +142,26 @@ namespace Piperlok
                         OnCollision(go);
                     }
                 }
-                
+
             }
+            int gravityProc = 0;
             foreach (Objects go in GameWorld.objList)
             {
-              
-                    if (this.IsCollidingWith(go))
-                    {
-                        OnCollision(go);
-                    }
-                
-                
-            }
-        }
 
+                if (this.IsCollidingWith(go))
+                {
+                    OnCollision(go);
+                    gravityProc++;
+                }
+            }
+            if (this is Piperlok)
+            {
+                if (gravityProc <= 0)
+                {
+                    
+                }
+            }
+ 
+        }
     }
 }

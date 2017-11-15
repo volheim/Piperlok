@@ -16,7 +16,7 @@ namespace Piperlok
         DateTime updateStart;
         DateTime updateEnd;
         Graphics dc;
-
+        //Rectangle displayRectangle = new Rectangle(0, 0, 1920, 1080);
         //Defines the GameWorld
         GameWorld gw;
 
