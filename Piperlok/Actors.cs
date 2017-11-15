@@ -24,10 +24,12 @@ namespace Piperlok
         protected List<Image> animationFrames;
         //Index used for running through the animations
         protected float currentFrameIndex = 5;
+        public bool grounded;
 #endregion
 
         public virtual void Update(float fps)
         {
+            
             //Runs all GameObject's gamelogic
             CheckCollision();
         }
@@ -144,11 +146,15 @@ namespace Piperlok
                     gravityProc++;
                 }
             }
-            if (this is Piperlok)
+
+            foreach(Actors a in GameWorld.actorList)
             {
-                if (gravityProc <= 0)
+                if (a is Piperlok)
                 {
-                    IsnotGrounded();
+                    if (a.grounded = false && gravityProc <= 0)
+                    {
+                        a.IsnotGrounded();
+                    }
                 }
             }
  

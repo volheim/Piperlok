@@ -24,7 +24,7 @@ namespace Piperlok
         private static Rectangle DisplayRectangle;
         static public List<Objects> objList;
         static public List<PowerUps> powerupList;
-        private static List<Actors> actorList;
+        public static List<Actors> actorList;
         private static List<Objects> romovedList;
         private static List<BackGrounds> bgList;
         BufferedGraphics backBuffer;
@@ -73,10 +73,27 @@ namespace Piperlok
             lr.GenLevel3();
             GenerateLevel();
 
+            actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(30, 13*60f), 3f, "Player"));
+
         }
 
         public void GenerateLevel()
         {
+            //fill boxes jus below screen
+            for (int x = 0; x < 1200;)
+            {
+                int y = 900;
+                objList.Add(new Block(false, true, @"Sprites\Platforms\BaseBlock.png", new Vector2D(x,y), "Block", 1, false));
+                x += 60;
+            }
+
+            for (int y = 0; y < 910;)
+            {
+                objList.Add(new Block(false, true, @"Sprites\Platforms\BaseBlock.png", new Vector2D(-60, y), "Block", 1, false));
+                objList.Add(new Block(false, true, @"Sprites\Platforms\BaseBlock.png", new Vector2D(1200, y), "Block", 1, false));
+                y += 60;
+            }
+
             for (int x = 0; x <= 19;)
             {
                 for (int y = 0; y <= 14;)
@@ -89,7 +106,7 @@ namespace Piperlok
                     else if (level1[x, y] == 1)
                     {
                         //block
-                        objList.Add(new Block(false, true, @"Sprites\Platforms\BaseBlock.png", new Vector2D((x) * 60, (y+1) * 60), "Block", 1, false));
+                        objList.Add(new Block(false, true, @"Sprites\Platforms\BaseBlock.png", new Vector2D((x) * 60, (y) * 60), "Block", 1, false));
                     }
                     else if (level1[x, y] == 2)
                     {
@@ -133,9 +150,6 @@ namespace Piperlok
                 }
                 x+=1;
             }
-
-            
-            actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(1.5f, 520f),2f, "player"));
 
         }
 
@@ -187,10 +201,7 @@ namespace Piperlok
 
             dc.Clear(Color.Black);        
 
-#if DEBUG
-            Font f = new Font("Arial", 16);
-            dc.DrawString(string.Format("FPS : {0}", currentFps), f, Brushes.Red, 2,2);
-#endif
+
             foreach (BackGrounds bg in bgList)
             {
                 bg.Draw(dc);
@@ -203,6 +214,11 @@ namespace Piperlok
             {
                 act.Draw(dc);
             }
+
+#if DEBUG
+            Font f = new Font("Arial", 16);
+            dc.DrawString(string.Format("FPS : {0}", currentFps), f, Brushes.Red, 2, 2);
+#endif
 
             backBuffer.Render();
 

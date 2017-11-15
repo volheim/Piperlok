@@ -20,17 +20,7 @@ namespace Piperlok
         public bool destroyable;
         #endregion
         #region Properties
-<<<<<<< HEAD
-
         public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name, float scalefactor, bool destroyable)
-=======
-        public Vector2D Position
-        {
-            get { return position; }
-        }
-        #endregion
-        public Objects(bool moveable, bool collideable, string imagePath, Vector2D position, string name, float scalefactor)
->>>>>>> origin/Jump
         {
             this.moveable = moveable;
             this.collideable = collideable;
@@ -45,7 +35,6 @@ namespace Piperlok
             get { return position; }
         }
 
-
         #endregion
 
 
@@ -54,11 +43,7 @@ namespace Piperlok
         {
             get
             {
-<<<<<<< HEAD
                 return new RectangleF(position.X, position.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
-=======
-                return new RectangleF(position.X, position.Y, sprite.Width*scaleFactor, sprite.Height*scaleFactor);
->>>>>>> origin/Jump
             }
         }
 
@@ -84,11 +69,7 @@ namespace Piperlok
         {
             if (other is Piperlok)
             {
-<<<<<<< HEAD
                 GameWorld.RomovedList.Add(this);
-=======
-
->>>>>>> origin/Jump
             }
         }
         public virtual void Collide()

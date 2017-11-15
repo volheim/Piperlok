@@ -14,6 +14,8 @@ namespace Piperlok
         float jumpHeight = 30;
         float jumpHeightLeft;
         float jumpTime;
+
+
         // used when player fall out off map
         private Vector2D startPosition;
         //Refrence to Vector2D
@@ -30,25 +32,15 @@ namespace Piperlok
             set { CollisionBox = value; }
         }
         //Piperlok's constructor
-<<<<<<< HEAD
         public Piperlok(string imagePaths, float speed, int health, Vector2D startposition, float scaleFactor, string name) : base(imagePaths, speed, startposition, scaleFactor, name)
         {
             name = "Piperlok";
             //skab en sprite og collision box til piperlok
-            collisionBox = new RectangleF(startposition.X, startposition.Y, sprite.Width * scaleFactor, sprite.Height * scaleFactor);
             position = startposition;
             position.Y = startposition.Y - (this.sprite.Height * scaleFactor);
 
             grounded = false;
-=======
-        public Piperlok(string imagePaths, float speed, int health, Vector2D startPosition, float scaleFactor) : base(imagePaths, speed, startPosition, scaleFactor)
-        {
-            name = "Piperlok";
-            //skab en sprite og collision box til piperlok
-            position = startPosition;
-            this.startPosition = startPosition;
-            bool grounded = true;
->>>>>>> origin/Jump
+            this.startPosition = position;
         }
 
         //Piperloks Update funktion
@@ -59,6 +51,10 @@ namespace Piperlok
             if (!grounded)
             {
                 Gravity();
+            }
+            else
+            {
+                jumpHeightLeft = 0;
             }
             //Assigns different keys to Piperloks movement
             if (Keyboard.IsKeyDown(Keys.A) || Keyboard.IsKeyDown(Keys.Left))
@@ -74,18 +70,19 @@ namespace Piperlok
                 Jump();
             }
 
-
             base.Update(fps);
+
+
         }
         public void IsAlive()
         {
-            if(position.Y + sprite.Height > 1100)
+            /*if(position.Y + sprite.Height > 1100)
             {
                 health--;
                 position = startPosition;
                 jumpHeightLeft = 0;
                 grounded = true;
-            }
+            }*/
             if(health <= 0)
             {
             }
@@ -124,12 +121,12 @@ namespace Piperlok
 
         }*/
 
-            netMove = (jumpHeightLeft - (gravityPull * Form1.currentFps / 10));
-            jumpHeightLeft -= gravityPull * Form1.currentFps / 10;
+            netMove = (jumpHeightLeft - (gravityPull * Form1.currentFps / 15));
+            jumpHeightLeft -= gravityPull * Form1.currentFps / 15;
 
             //sætter en terminal velocity
-            if (netMove < -3) { netMove = -4; }
-            position.Y -= netMove * (Form1.currentFps / 10);
+            if (netMove < -9.82f) { netMove = -9.82f; }
+            position.Y -= netMove * (Form1.currentFps / 15);
 
 
         }
@@ -147,30 +144,20 @@ namespace Piperlok
 
         protected override void CheckCollision()
         {
-
+            grounded = false;
             //Runs through all objects in the GameWorld
             foreach (Objects go in GameWorld.objList)
             {
-                //If the Actors we are checking isn't itself
-                //This prevents them from colliding with itself
-               //if (go != this)
-                //{
-                    //If this object is colliding with the other object
-                    //Then we have a collision
-                    if (this.IsCollidingWith(go))
-                    {
-                        //a collision has happend
-                        OnCollision(go);
-                    }
-                //}
+                //If this object is colliding with the other object
+                //Then we have a collision
+            if (this.IsCollidingWith(go))
+                {
+                //a collision has happend
+                OnCollision(go);
+                }
             }
         }
-<<<<<<< HEAD
-          
-         public void IsNotGrounded()
-=======
         public override void IsnotGrounded()
->>>>>>> origin/Jump
         {
             ///<summary>
             ///this method is called when piperlok did not collide with any object
@@ -183,14 +170,14 @@ namespace Piperlok
             ///<summary>
             ///piperlok overide funktion til onCollision. den omhandler primært clipping og tyngdekraft så piperlok ikke falder igemmem objekter
             /// </summary>
-            if(other is WalkableTerrain)
+            if(other is Block)
             {
                 ///<summary>
                 ///if the object piperlok had a collision  with is of the class WalkableTerrain then this metode will find out where the collision happend. 
                 /// </summary> 
 
                 //
-                if (this.CollisionBox.Bottom + 2 >= other.CollisionBox.Top && this.CollisionBox.Bottom <= other.CollisionBox.Top + 20 && !grounded)
+                if (this.CollisionBox.Bottom + 2 >= other.CollisionBox.Top && this.CollisionBox.Bottom <= other.CollisionBox.Top + 30 && !grounded)
                 {
                     //sætter piperlok til at være oven på et objekt 
                     grounded = true;
@@ -203,12 +190,12 @@ namespace Piperlok
                     position.Y = other.CollisionBox.Top - CollisionBox.Height;
                 }
 
-                else if (CollisionBox.Right >= other.CollisionBox.Left && CollisionBox.Right <= other.CollisionBox.Left + 10)
+                else if (CollisionBox.Right >= other.CollisionBox.Left && CollisionBox.Right <= other.CollisionBox.Left + 20)
                 {
                     position.X = other.CollisionBox.Left - CollisionBox.Width;
                 }
 
-                else if (CollisionBox.Left >= other.CollisionBox.Right - 10 && CollisionBox.Left <= other.CollisionBox.Right)
+                else if (CollisionBox.Left >= other.CollisionBox.Right - 20 && CollisionBox.Left <= other.CollisionBox.Right)
                 {
                     position.X = other.CollisionBox.Right;
                 }
