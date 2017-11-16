@@ -107,13 +107,13 @@
     <Content Include="Enemy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Interfaces\Levels\Screen1.bmp">
+    <Content Include="Levels\Screen1.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Interfaces\Levels\Screen2.bmp">
+    <Content Include="Levels\Screen2.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Interfaces\Levels\Screen3.bmp">
+    <Content Include="Levels\Screen3.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sprites\Backgrounds\Background_0.png">
