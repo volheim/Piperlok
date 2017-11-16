@@ -19,7 +19,7 @@ namespace Piperlok
         //Rectangle displayRectangle = new Rectangle(0, 0, 1920, 1080);
         //Defines the GameWorld
         GameWorld gw;
-
+        
         public static float currentFps;
 
         public Form1()
@@ -52,7 +52,7 @@ namespace Piperlok
             
             //Instantiates the GameWorld
             Rectangle s = this.DisplayRectangle;
-            gw = new GameWorld(CreateGraphics(), this.DisplayRectangle);
+            gw = new GameWorld(CreateGraphics(), this.DisplayRectangle, gw);
         }
     }
 }

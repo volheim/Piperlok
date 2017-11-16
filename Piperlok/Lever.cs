@@ -19,9 +19,10 @@ namespace Piperlok
 
         public override void OnCollision(Actors other)
         {
-            if (other is Actors)
+            if (other is Piperlok)
             {
                 //Piperlok is colliding with a cola
+
             }
         }
         public override void Collide()

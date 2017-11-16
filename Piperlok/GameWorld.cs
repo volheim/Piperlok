@@ -10,13 +10,14 @@ namespace Piperlok
 {
     class GameWorld
     {
-        int curentLevel;
+        public static int curentLevel;
         LevelReader lr = new LevelReader();
 
 
-        int[,] level1 = new int[20,15];
+        int[,] level;
 
         DateTime endTime;
+        DateTime invincibleTime;
 
         public float currentFps;
 
@@ -29,8 +30,9 @@ namespace Piperlok
         private static List<BackGrounds> bgList;
         BufferedGraphics backBuffer;
 
-        public GameWorld(Graphics dc, Rectangle displayRectangle)
+        public GameWorld(Graphics dc, Rectangle displayRectangle, GameWorld gw)
         {
+
             this.backBuffer = BufferedGraphicsManager.Current.Allocate(dc, displayRectangle);
 
             this.dc = backBuffer.Graphics;
@@ -38,9 +40,11 @@ namespace Piperlok
         }
 
 
-        void SetupWorld()
+        public void SetupWorld()
         {
-
+            
+            curentLevel++;
+            level = new int[20, 15];
             bgList = new List<BackGrounds>();
             endTime = DateTime.Now;
             actorList = new List<Actors>();
@@ -72,9 +76,26 @@ namespace Piperlok
             lr.GenLevel2();
             lr.GenLevel3();
             GenerateLevel();
+        }
 
-            actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(30, 13*60f), 3f, "Player"));
+        public static void RemoveDoor(Objects b)
+        {
+            if (b.destroyable)
+            {
+                romovedList.Add(b);
+            }
+        }
 
+
+        public static void OpenDoor()
+        {
+            foreach (Objects b in ObjectList)
+            {
+                if (b is Block)
+                {
+                    RemoveDoor(b);
+                }
+            }
         }
 
         public void GenerateLevel()
@@ -94,59 +115,81 @@ namespace Piperlok
                 y += 60;
             }
 
+            if(curentLevel == 1)
+            {
+                lr.GenLevel1();
+                level = lr.screen1;
+            }
+            if (curentLevel == 2)
+            {
+                level = lr.screen2;
+                lr.GenLevel2();
+            }
+            if (curentLevel == 3)
+            {
+                lr.GenLevel3();
+                level = lr.screen3;
+            }
+
+
             for (int x = 0; x <= 19;)
             {
                 for (int y = 0; y <= 14;)
                 {
-                    level1[x, y] = lr.screen3[x, y];
-                    if (level1[x, y] == 0)
+                    if (level[x, y] == 0)
                     {
                         //empty
                     }
-                    else if (level1[x, y] == 1)
+                    else if (level[x, y] == 1)
                     {
                         //block
                         objList.Add(new Block(false, true, @"Sprites\Platforms\BaseBlock.png", new Vector2D((x) * 60, (y) * 60), "Block", 1, false));
                     }
-                    else if (level1[x, y] == 2)
+                    else if (level[x, y] == 2)
                     {
                         //door
+                        objList.Add(new Block(false, true, @"Sprites\Platforms\BaseBlock.png", new Vector2D((x) * 60, (y) * 60), "Block", 1, true));
                     }
-                    else if (level1[x, y] == 3)
+                    else if (level[x, y] == 3)
                     {
                         //tech zombie
-                        actorList.Add(new TechZombie(@"Sprites\ZombieAnim\zombie_00.png", 1, 1, new Vector2D((x) * 60, (y+1) * 60), 5f, "zomb"));
+                        actorList.Add(new TechZombie(@"Sprites\ZombieAnim\zombie_00.png", 1, 1, new Vector2D((x) * 60, (y+1) * 60), 3.5f, "zomb", 1));
                     }
-                    else if (level1[x, y] == 4)
+                    else if (level[x, y] == 4)
                     {
                         //camera
                         actorList.Add(new Camera(@"Sprites\objekter\cameraMrød.png", 10, 100, new Vector2D((x) * 60, (y+1) * 60), 0.3f, "cam"));
                     }
-                    else if (level1[x, y] == 5)
+                    else if (level[x, y] == 5)
                     {
                         //cola machine
                         objList.Add(new Sodavandsautomat(new Vector2D(x * 60, (y + 1) * 60), @"Sprites\objekter\g4968.png","soda machine", 0.3f, false));
                     }
-                    else if (level1[x, y] == 6)
+                    else if (level[x, y] == 6)
                     {
                         //computer
                         objList.Add(new Computer(new Vector2D((x) * 60, (y+1) * 60), @"Sprites\objekter\computer.png", "computer", 0.3f, false));
                     }
-                    else if (level1[x, y] == 7)
+                    else if (level[x, y] == 7)
                     {
                         //lever
                         objList.Add(new Lever(new Vector2D((x * 60)+25, (y+1) * 60), @"Sprites\Objekter\switchoff.png", "LeverOFF", 0.2f, false));
                     }
-                    else if (level1[x, y] == 8)
+                    else if (level[x, y] == 8)
                     {
                         //beer
                         objList.Add(new ElefantØl(1, new Vector2D((x) * 60, (y+1) * 60), @"Sprites\objekter\elefantøl.png", "Beer", 0.08f, true));
                     }
-                    else if (level1[x, y] == 9)
+                    else if (level[x, y] == 9)
                     {
                         //power box
                     }
-                    y+=1;
+                    if (level[x, y] == 10)
+                    {
+                        //piperlok
+                        actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(x * 60f, y * 60f), 3.5f, "Player"));
+                    }
+                    y +=1;
                 }
                 x+=1;
             }
@@ -173,6 +216,14 @@ namespace Piperlok
 
         public void Update(float fps)
         {
+
+            if (Piperlok.nextLevel)
+            {
+                SetupWorld();
+                Piperlok.nextLevel = false;
+            }
+
+
             if (romovedList != null)
             {
                 foreach (Objects ac in romovedList)
@@ -241,6 +292,10 @@ namespace Piperlok
             Update(currentFps);// Updates the game
             Draw(); //Draws the game
             endTime = DateTime.Now; //Log end time
+            if (Piperlok.invincible && (invincibleTime.Second +0.5f <= DateTime.Now.Second || (invincibleTime.Second >= 59.5f && DateTime.Now.Second <= 59.4f)))
+            {
+                Piperlok.invincible = false;
+            }
         }
     }
 }

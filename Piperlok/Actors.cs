@@ -13,7 +13,7 @@ namespace Piperlok
         //Indicates that an actor is alive. Cameras who is not alive, stops working. Techzomies is not dangerous anymore and Piperlok and Milo is dying.
         public bool alive;
         protected float speed;
-        protected int health;
+        public int health;
         public string name;
         public float scaleFactor;
         Vector2D position;

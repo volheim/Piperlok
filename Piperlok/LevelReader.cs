@@ -27,6 +27,7 @@ namespace Piperlok
          * 7 = switch
          * 8 = beer
          * 9 = power box
+         * 10 = piperlok
          */
 
         public void GenLevel1()
@@ -43,7 +44,7 @@ namespace Piperlok
                     {
                         screen1[x, y] = 1;
                     }
-                    else if (level1.GetPixel(x, y).ToArgb() == Color.FromArgb(127,121,121).ToArgb())
+                    else if (level1.GetPixel(x, y).ToArgb() == Color.FromArgb(121,121,121).ToArgb())
                     {
                         screen1[x, y] = 2;
                     }
@@ -75,7 +76,11 @@ namespace Piperlok
                     {
                         screen1[x, y] = 9;
                     }
-                    y+=1;
+                    else if (level1.GetPixel(x, y).ToArgb() == Color.FromArgb(255, 0, 255).ToArgb())
+                    {
+                        screen1[x, y] = 10;
+                    }
+                    y +=1;
                 }
                 x+=1;
             }
@@ -94,7 +99,7 @@ namespace Piperlok
                     {
                         screen2[x, y] = 1;
                     }
-                    else if (level2.GetPixel(x, y) == Color.FromArgb(127, 121, 121))
+                    else if (level2.GetPixel(x, y) == Color.FromArgb(121, 121, 121))
                     {
                         screen2[x, y] = 2;
                     }
@@ -126,6 +131,10 @@ namespace Piperlok
                     {
                         screen2[x, y] = 9;
                     }
+                    else if (level2.GetPixel(x, y) == Color.FromArgb(255, 0, 255))
+                    {
+                        screen2[x, y] = 10;
+                    }
                     y++;
                 }
                 x++;
@@ -145,7 +154,7 @@ namespace Piperlok
                     {
                         screen3[x, y] = 1;
                     }
-                    else if (level3.GetPixel(x, y) == Color.FromArgb(127, 121, 121))
+                    else if (level3.GetPixel(x, y) == Color.FromArgb(121, 121, 121))
                     {
                         screen3[x, y] = 2;
                     }
@@ -176,6 +185,10 @@ namespace Piperlok
                     else if (level3.GetPixel(x, y) == Color.FromArgb(252, 255, 0))
                     {
                         screen3[x, y] = 9;
+                    }
+                    else if (level3.GetPixel(x, y) == Color.FromArgb(255, 0, 255))
+                    {
+                        screen3[x, y] = 10;
                     }
                     y++;
                 }

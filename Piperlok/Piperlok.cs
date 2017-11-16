@@ -11,10 +11,15 @@ namespace Piperlok
     class Piperlok : Actors
     {
 
+        GameWorld gw;
+
         float jumpHeight = 30;
         float jumpHeightLeft;
         float jumpTime;
 
+        public static bool invincible;
+
+        public static bool nextLevel;
 
         // used when player fall out off map
         private Vector2D startPosition;
@@ -34,6 +39,9 @@ namespace Piperlok
         //Piperlok's constructor
         public Piperlok(string imagePaths, float speed, int health, Vector2D startposition, float scaleFactor, string name) : base(imagePaths, speed, startposition, scaleFactor, name)
         {
+            this.health = health;
+            gw = this.gw;
+
             name = "Piperlok";
             //skab en sprite og collision box til piperlok
             position = startposition;
@@ -46,6 +54,11 @@ namespace Piperlok
         //Piperloks Update funktion
         public override void Update(float fps)
         {
+            if(CollisionBox.Right >= 1198 && GameWorld.curentLevel < 3)
+            {
+                nextLevel = true;
+            }
+
             IsAlive();
             //Calls Gravity
             if (!grounded)
@@ -85,6 +98,8 @@ namespace Piperlok
             }*/
             if(health <= 0)
             {
+                GameWorld.curentLevel = 0;
+                nextLevel = true;
             }
         }
         //Piperloks Jump funktion
@@ -167,6 +182,21 @@ namespace Piperlok
         }
         public override void OnCollision(Objects other)
         {
+            if (other is Lever || other is Computer)
+            {
+                GameWorld.OpenDoor();
+            }
+
+            if(other is Sodavandsautomat)
+            {
+                foreach (Actors act in GameWorld.actorList)
+                {
+                    if ( act is TechZombie)
+                    {
+                        act.health = 0;
+                    }
+                }
+            }
             ///<summary>
             ///piperlok overide funktion til onCollision. den omhandler primært clipping og tyngdekraft så piperlok ikke falder igemmem objekter
             /// </summary>

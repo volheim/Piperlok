@@ -227,3 +227,6 @@ C:\Users\MIKZ\source\repos\Piperlok\Piperlok\bin\Debug\Sprites\Levels\Screen3.bm
 C:\Users\MIKZ\source\repos\Piperlok\Piperlok\bin\Debug\Levels\Screen1.bmp
 C:\Users\MIKZ\source\repos\Piperlok\Piperlok\bin\Debug\Levels\Screen2.bmp
 C:\Users\MIKZ\source\repos\Piperlok\Piperlok\bin\Debug\Levels\Screen3.bmp
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Levels\Screen1.bmp
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Levels\Screen2.bmp
+C:\Users\Allan\Documents\GitHub\Piperlok\Piperlok\bin\Debug\Sprites\Levels\Screen3.bmp
