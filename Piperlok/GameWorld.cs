@@ -72,9 +72,6 @@ namespace Piperlok
             bgList.Add(new BackGrounds(@"Sprites\Backgrounds\Background_0.png;Sprites\Backgrounds\Background_1.png;Sprites\Backgrounds\Background_2.png;Sprites\Backgrounds\Background_4.png;Sprites\Backgrounds\Background_5.png;Sprites\Backgrounds\Background_6.png", new Vector2D(600, 0)));
 
 
-            lr.GenLevel1();
-            lr.GenLevel2();
-            lr.GenLevel3();
             GenerateLevel();
         }
 
