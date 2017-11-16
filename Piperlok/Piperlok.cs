@@ -20,6 +20,7 @@ namespace Piperlok
         public static bool invincible;
 
         public static bool nextLevel;
+        public static bool prevLevel;
 
         // used when player fall out off map
         private Vector2D startPosition;
@@ -39,6 +40,7 @@ namespace Piperlok
         //Piperlok's constructor
         public Piperlok(string imagePaths, float speed, int health, Vector2D startposition, float scaleFactor, string name) : base(imagePaths, speed, startposition, scaleFactor, name)
         {
+            
             this.health = health;
             gw = this.gw;
 
@@ -54,10 +56,14 @@ namespace Piperlok
         //Piperloks Update funktion
         public override void Update(float fps)
         {
-            if(CollisionBox.Right >= 1198 && GameWorld.curentLevel < 3)
+            if(CollisionBox.Right >= 1199 && GameWorld.curentLevel < 3)
             {
                 nextLevel = true;
             }
+            /*if (CollisionBox.Left <= 1 && GameWorld.curentLevel > 1)
+            {
+                prevLevel = true;
+            }*/
 
             IsAlive();
             //Calls Gravity

@@ -187,7 +187,7 @@ namespace Piperlok
                     if (level[x, y] == 10)
                     {
                         //piperlok
-                        actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D(x * 60f, y * 60f), 3.5f, "Player"));
+                        actorList.Add(new Piperlok(@"Sprites\Piperlok animation\walk_00.png;Sprites\Piperlok animation\walk_01.png;Sprites\Piperlok animation\walk_02.png;Sprites\Piperlok animation\walk_03.png;Sprites\Piperlok animation\walk_04.png;Sprites\Piperlok animation\walk_05.png;Sprites\Piperlok animation\walk_06.png;Sprites\Piperlok animation\walk_07.png", 15, 3, new Vector2D((x * 60f) + 5, y * 60f), 3.5f, "Player"));
                     }
                     y +=1;
                 }
@@ -221,6 +221,12 @@ namespace Piperlok
             {
                 SetupWorld();
                 Piperlok.nextLevel = false;
+            }
+            if (Piperlok.prevLevel)
+            {
+                curentLevel -= 2;
+                SetupWorld();
+                Piperlok.prevLevel = false;
             }
 
 
@@ -292,7 +298,7 @@ namespace Piperlok
             Update(currentFps);// Updates the game
             Draw(); //Draws the game
             endTime = DateTime.Now; //Log end time
-            if (Piperlok.invincible && (invincibleTime.Second +0.5f <= DateTime.Now.Second || (invincibleTime.Second >= 59.5f && DateTime.Now.Second <= 59.4f)))
+            if (Piperlok.invincible && (invincibleTime.Second +15 <= DateTime.Now.Second))
             {
                 Piperlok.invincible = false;
             }

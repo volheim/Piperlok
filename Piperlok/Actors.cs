@@ -37,7 +37,7 @@ namespace Piperlok
         //Actors constructor
         public Actors(string imagePath, float speed, Vector2D startposition, float scaleFactor, string name)
         {
-            animationSpeed = 5;
+            animationSpeed = 20;
 
             //Stores all paths in a array
             string[] imagePaths = imagePath.Split(';');
