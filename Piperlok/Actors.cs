@@ -9,38 +9,33 @@ namespace Piperlok
 {
     abstract class Actors
     {
+#region Fields
         //Indicates that an actor is alive. Cameras who is not alive, stops working. Techzomies is not dangerous anymore and Piperlok and Milo is dying.
         public bool alive;
-        public float speed;
-        public int health;
+        protected float speed;
+        protected int health;
         public string name;
         public float scaleFactor;
-        private List<DeathList> deathlist = new List<DeathList>();
-
-        GameWorld GW;
         Vector2D position;
-
         public Image sprite;
-
         public float gravityPull;
-
         float animationSpeed;
-
         //List of all frames in the animation
         protected List<Image> animationFrames;
-
         //Index used for running through the animations
         protected float currentFrameIndex = 5;
-
+        public bool grounded;
+#endregion
 
         public virtual void Update(float fps)
         {
+            
             //Runs all GameObject's gamelogic
             CheckCollision();
         }
 
         //Actors constructor
-        public Actors(string imagePath, float speed, Vector2D startposition, float scaleFactor)
+        public Actors(string imagePath, float speed, Vector2D startposition, float scaleFactor, string name)
         {
             animationSpeed = 5;
 
@@ -63,6 +58,7 @@ namespace Piperlok
             this.sprite = this.animationFrames[0];
             this.gravityPull = 2f;
             this.scaleFactor = scaleFactor;
+
         }
 
         public virtual void Gravity()
@@ -115,7 +111,8 @@ namespace Piperlok
         {
             return CollisionBox.IntersectsWith(other.CollisionBox);
         }
-
+        public virtual void IsnotGrounded() {
+        }
         //This method is called whenever a collision happens
         public abstract void OnCollision(Actors other);
         public abstract void OnCollision(Objects other);
@@ -123,7 +120,7 @@ namespace Piperlok
         protected virtual void CheckCollision()
         {
             //Runs through all objects in the GameWorld
-            foreach (Actors go in GameWorld.actorList)
+            foreach (Actors go in GameWorld.ActorList)
             {
                 //If the Actors we are checking isn't itself
                 //This prevents them from colliding with itself
@@ -149,11 +146,15 @@ namespace Piperlok
                     gravityProc++;
                 }
             }
-            if (this is Piperlok)
+
+            foreach(Actors a in GameWorld.actorList)
             {
-                if (gravityProc <= 0)
+                if (a is Piperlok)
                 {
-                    
+                    if (a.grounded = false && gravityProc <= 0)
+                    {
+                        a.IsnotGrounded();
+                    }
                 }
             }
  

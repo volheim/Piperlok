@@ -47,10 +47,10 @@
   <ItemGroup>
     <Compile Include="Actors.cs" />
     <Compile Include="BackGrounds.cs" />
+    <Compile Include="Block.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="Cola.cs" />
     <Compile Include="Computer.cs" />
-    <Compile Include="DeathList.cs" />
     <Compile Include="ElefantØl.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -58,7 +58,14 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="WalkableTerrain.cs" />
+    <Compile Include="FPowerUps\ElefantØl.cs" />
+    <Compile Include="FPowerUps\PowerUps.cs" />
+    <Compile Include="GameObejcts\Box.cs" />
+    <Compile Include="GameObejcts\ColaMachine.cs" />
+    <Compile Include="GameObejcts\PowerBox.cs" />
+    <Compile Include="GameObejcts\PowerPlate.cs" />
+    <Compile Include="GameObejcts\PowerSwitch.cs" />
+    <Compile Include="GameObejcts\WalkableTerrain.cs" />
     <Compile Include="GameWorld.cs" />
     <Compile Include="Interfaces\Icollideable.cs" />
     <Compile Include="Interfaces\IEnemy.cs" />
@@ -67,6 +74,8 @@
     <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="Interfaces\Ipower.cs" />
     <Compile Include="Keyboard.cs" />
+    <Compile Include="LevelReader.cs" />
+    <Compile Include="Lever.cs" />
     <Compile Include="Milo_MacDonald.cs" />
     <Compile Include="Objects.cs" />
     <Compile Include="Piperlok.cs" />
@@ -76,6 +85,7 @@
     <Compile Include="Sodavandsautomat.cs" />
     <Compile Include="TechZombie.cs" />
     <Compile Include="Vector2D.cs" />
+    <Compile Include="WalkableTerrain.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,40 +115,36 @@
     <Content Include="Enemy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\Actors\Piperlok.png">
+    <Content Include="Levels\Screen1.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\Platforms\BaseBlock.png">
+    <Content Include="Levels\Screen2.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\Platforms\BaseBlockB.png" />
-    <Content Include="Images\Platforms\BaseBlockBL.png" />
-    <Content Include="Images\Platforms\BaseBlockBR.png" />
-    <Content Include="Images\Platforms\BaseBlockBRL.png" />
-    <Content Include="Images\Platforms\BaseBlockBT.png" />
-    <Content Include="Images\Platforms\BaseBlockBTL.png" />
-    <Content Include="Images\Platforms\BaseBlockBTR.png" />
-    <Content Include="Images\Platforms\BaseBlockL.png" />
-    <Content Include="Images\Platforms\BaseBlockR.png" />
-    <Content Include="Images\Platforms\BaseBlockRL.png" />
-    <Content Include="Images\Platforms\BaseBlockT.png" />
-    <Content Include="Images\Platforms\BaseBlockTL.png" />
-    <Content Include="Images\Platforms\BaseBlockTR.png" />
-    <Content Include="Images\Platforms\BaseBlockTRL.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_0.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_1.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_2.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_3.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_4.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_5.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundBare\BackGroundGlitch_6.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_0.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_1.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_2.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_3.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_4.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_5.png" />
-    <Content Include="Sprites\Backgrounds\BackGroundWindow\BackGroundWindowsGlitch_6.png" />
+    <Content Include="Levels\Screen3.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_0.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Backgrounds\Background_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Sprites\Piperlok animation\drink.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -169,12 +175,6 @@
     <Content Include="Sprites\Piperlok animation\walk_07.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sprites\Background01.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\Background02.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Sprites\objekter\cameraMrød.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -203,10 +203,6 @@
     <Content Include="Sprites\objekter\switchon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Sprites\Piperlok.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Sprites\PiperlokAnim\sprite_0.png" />
     <Content Include="Sprites\Platforms\BaseBlock.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -250,6 +246,33 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sprites\Platforms\BaseBlockTRL.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\ZombieAnim\zombie_00.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\ZombieAnim\zombie_01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\ZombieAnim\zombie_02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\ZombieAnim\zombie_03.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\ZombieAnim\zombie_04.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\ZombieAnim\zombie_05.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\ZombieAnim\zombie_06.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\ZombieAnim\zombie_07.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\ZombieAnim\zombie_08.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

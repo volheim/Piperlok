@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Piperlok
 {
-    class DeathList
+    class Power_boks : Objects
     {
     }
 }

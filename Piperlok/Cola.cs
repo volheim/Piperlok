@@ -13,7 +13,7 @@ namespace Piperlok
         public float speed;
         Vector2D position;
 
-        public Cola(Vector2D startposition, string imagePath,string name, float scaleFactor) : base(startposition,imagePath,name, scaleFactor)
+        public Cola(Vector2D startposition, string imagePath,string name, float scaleFactor, bool destroyable) : base(startposition,imagePath,name, scaleFactor, destroyable)
         {
             position = startposition;
         }

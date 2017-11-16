@@ -32,8 +32,5 @@ namespace Piperlok
         {
             return GetKeyState(key) == KeyStates.Down;
         }
-
     }
-
-    
 }

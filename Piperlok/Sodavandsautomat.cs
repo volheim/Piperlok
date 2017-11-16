@@ -11,12 +11,11 @@ namespace Piperlok
         public bool active;
         Vector2D position;
 
-        public Sodavandsautomat(Vector2D startposition, string imagePath, string name, float scaleFactor) :base (false,false, imagePath,startposition, name, scaleFactor)
+        public Sodavandsautomat(Vector2D startposition, string imagePath, string name, float scaleFactor, bool destroyable) :base (false,false, imagePath,startposition, name, scaleFactor, destroyable)
         {
             position = startposition;
+            position.Y = startposition.Y - (this.sprite.Height * scaleFactor);
         }
-
-        
 
         public override void OnCollision(Actors other)
         {

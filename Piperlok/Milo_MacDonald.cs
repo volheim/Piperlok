@@ -12,7 +12,7 @@ namespace Piperlok
 
         int damage;
 
-        public Milo_MacDonald(string imagePaths, float speed, int health, Vector2D startPosition, float scaleFactor) : base(imagePaths,speed , startPosition, scaleFactor)
+        public Milo_MacDonald(string imagePaths, float speed, int health, Vector2D startPosition, float scaleFactor,  string name) : base(imagePaths,speed , startPosition, scaleFactor, name)
         {
 
             name = "Milo MacDonald";
