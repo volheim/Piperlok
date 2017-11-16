@@ -58,14 +58,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FPowerUps\ElefantØl.cs" />
-    <Compile Include="FPowerUps\PowerUps.cs" />
-    <Compile Include="GameObejcts\Box.cs" />
-    <Compile Include="GameObejcts\ColaMachine.cs" />
-    <Compile Include="GameObejcts\PowerBox.cs" />
-    <Compile Include="GameObejcts\PowerPlate.cs" />
-    <Compile Include="GameObejcts\PowerSwitch.cs" />
-    <Compile Include="GameObejcts\WalkableTerrain.cs" />
     <Compile Include="GameWorld.cs" />
     <Compile Include="Interfaces\Icollideable.cs" />
     <Compile Include="Interfaces\IEnemy.cs" />
@@ -115,13 +107,13 @@
     <Content Include="Enemy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Levels\Screen1.bmp">
+    <Content Include="Interfaces\Levels\Screen1.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Levels\Screen2.bmp">
+    <Content Include="Interfaces\Levels\Screen2.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Levels\Screen3.bmp">
+    <Content Include="Interfaces\Levels\Screen3.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sprites\Backgrounds\Background_0.png">
@@ -143,6 +135,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sprites\Backgrounds\Background_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Levels\Screen1.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Levels\Screen2.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sprites\Levels\Screen3.bmp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Sprites\Piperlok animation\drink.png">
